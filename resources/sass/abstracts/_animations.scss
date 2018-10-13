@@ -1,0 +1,27 @@
+/* ------------------------------------------- */
+/* ANIMATIONS
+/* ------------------------------------------- */
+
+// --- PRE-LOADER ANIMATIONS --- \\
+
+@keyframes bounce {
+
+    0% { transform: translate(0, -50%) scale(1, .8); }
+    30% { transform: translate(0, -250%) scale(.8, 1); }
+    60% { transform: translate(0, -300%) scale(1, .8); }
+    85% { transform: translate(0, -50%) scale(1, .8); }
+    88% { transform: translate(0, -50%) scale(1, .8); }
+    95% { transform: translate(0, -50%) scale(1, .8); }
+    100% { transform: translate(0, -50%) scale(1, .8); }
+}
+
+@keyframes bounceShadow {
+
+    0% { transform: scale(1, 0.25); }
+    30% { transform: scale(1.5, 0.25); }
+    60% { transform: scale(2, 0.25); }
+    85% { transform: scale(1, 0.25); }
+    90% { transform: scale(1, 0.25); }
+    100% { transform: scale(1, 0.25); }
+
+}

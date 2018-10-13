@@ -1,0 +1,68 @@
+/* ------------------------------------------- */
+/* BASIC SETUP
+/* ------------------------------------------- */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    /* DEFINES WHAT REM IS */
+    font-size: 62.5%; /* Takes 62.5% of the default font size (16px). 100 / 16 = 62.5  */ /* || 1rem = 10px; 10px/16px = 62.5% || */
+
+    // * --- MEDIA QUERIES --- * \\
+
+    @include respond(phone) {       // NO NEED OF THIS MEDIA QUERY. AS tab-port QUERY ALREADY HAS THE SAME CONTENT IN IT. 
+        font-size: 50%;
+    }
+
+    @include respond(tab-land) {    // width < 1200? // IF THEY ARE CONFLICTING. LAST ONE APPLIES!
+        font-size: 56.25%;          // 1 rem = 9px; 9/16 = 56.25%
+    }
+
+    @include respond(tab-port) {    // width < 900?
+        font-size: 50%;             // 1 rem = 8px; 8/16 = 50%
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%;             // 1 rem = 12px; 12/16 = 75%;
+    }
+}
+
+body {
+
+    // * --- MEDIA QUERIES --- * \\
+    @include respond(tab-port) {
+        padding: 0;
+    }
+}
+
+    // GRID SETUP / LAYOUT SETUP | USE MEDIA QUERIES TO CHANGE GRID DEFINITIONS \\ 
+   /* .container {
+        display: grid;
+        grid-template-rows: 80vh min-content 40vw repeat(3, min-content);               
+        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];   
+        // CONTENT WILL BE DISPLAYED (RESPONSIVE) BETWEEN ITS MINIMUM CONTENT AND 1400px 
+        // TWO 1fr's ARE THE EMPTY COLUMNS THAT CENTERS REST OF THE PAGES CONTENT
+        // SIDEBAR-START | SIDEBAR-END is the sidebar option
+        // FULL-START | FULL-END is the content that goes from the begining of the VW to the end of the VW
+        // CENTER-START | CENTER-END is the content that is centered for the VW
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-largest) {
+            display: grid;
+            grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);               
+            grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];
+        }
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-medium) {    
+            display: grid;
+            grid-template-rows: 6rem calc(100vh - 6rem); // USE CALC TO "MERGE" NAVIGATION ON TOP AND HEADER INTO THE ONE SECTION
+        }
+    } */

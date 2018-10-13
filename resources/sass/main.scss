@@ -1,0 +1,20 @@
+/* ------------------------------------------- */
+/* 7-1 TYPE FOLDER / FILES IMPLEMENTATION
+/* ------------------------------------------- */
+
+/* --- ABSTRACTS --- */
+@import "resources/sass/abstracts/_animations.scss";
+@import "resources/sass/abstracts/_variables.scss";
+@import "resources/sass/abstracts/_mixins.scss";
+
+/* --- BASE --- */
+@import "resources/sass/base/_base.scss";
+@import "resources/sass/base/_utilities.scss";
+
+/* --- COMPONENTS --- */
+@import "resources/sass/components/_pre-loader.scss";
+
+/* --- LAYOUT --- */ 
+@import "resources/sass/layout/_header.scss";
+
+/* --- PAGES --- */

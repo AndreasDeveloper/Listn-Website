@@ -1,12 +1,13 @@
 {
   "name": "Explorer",
   "version": "1.0.0",
-  "description": "Explorer is a website related to exploring the planet earth",
+  "description": "LISTN all new releases on our brand new app.",
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass resources/sass/main.scss resources/css3/style.css -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass",
+    
     "compile:sass": "node-sass resources/sass/main.scss resources/css3/style.comp.css",
     "concat:css": "concat -o resources/css3/style.concat.css resources/css3/icons/icon-font.css resources/css3/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 version\" resources/css3/style.concat.css -o resources/css3/style.prefix.css",

@@ -1,0 +1,15 @@
+/* ------------------------------------------- */
+/* HEADER
+/* ------------------------------------------- */
+
+.header {
+
+    background-image: linear-gradient(rgba($color-primary-dark, .63), rgba($color-primary-dark, .83)), url(../images/nyc-1.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+
+    // Part that is mandatory for pre-loader to work
+    display: none;
+}
