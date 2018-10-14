@@ -46,6 +46,44 @@
     }
 }
 
+// rev-block-2 class for block element number 2
+@keyframes rev-block-2 {
+
+    0% {
+        left: 40%;
+        width: 0%;
+    }
+
+    50% {
+        left: 40%;
+        width: 40%;
+    }
+
+    100% {
+        left: 81%;
+        width: 0%;
+    }
+}
+
+// rev-block-3 class for block element number 3
+@keyframes rev-block-3 {
+
+    0% {
+        left: 60%;
+        width: 0%;
+    }
+
+    50% {
+        left: 60%;
+        width: 40%;
+    }
+
+    100% {
+        left: 100%;
+        width: 0%;
+    }
+}
+
 @keyframes appear-text {
 
     0% {
@@ -55,4 +93,91 @@
     100% {
         opacity: 1;
     }
+}
+
+// * --- MEDIA QUERIES | FOR KEYFRAMES --- * \\
+
+// For Tablets | From 800px 
+@media only screen and (max-width: 50em) {
+    @keyframes rev-block {
+
+        0% {
+            left: 0;
+            width: 0%;
+        }
+
+        50% {
+            left: 0;
+            width: 65%;
+        }
+
+        100% {
+            left: 65%;
+            width: 0%;
+        }
+
+    }
+}
+
+// Media Query for Firefox ONLY | From 800px \\
+@media all and (min--moz-device-pixel-ratio:0) and (max-width: 50em) {
+    @keyframes rev-block {
+
+        0% {
+            left: 0;
+            width: 0%;
+        }
+
+        50% {
+            left: 0;
+            width: 65%;
+        }
+
+        100% {
+            left: 65%;
+            width: 0%;
+        }
+    }
+}
+
+// --- SLIDESHOW EFFECT | ANIMATION --- \\
+
+@keyframes animate {
+
+    0% {
+        left: 0;
+    }
+
+    20% {
+        left: 0;
+    }
+
+    25% {
+        left: -100%;
+    }
+
+    45% {
+        left: -100%;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+    70% {
+        left: -200%;
+    }
+
+    75% {
+        left: -300%;
+    }
+
+    95% {
+        left: -300%;
+    }
+
+    100% {
+        left: -400%;
+    }
+
 }
