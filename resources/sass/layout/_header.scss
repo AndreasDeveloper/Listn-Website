@@ -2,14 +2,91 @@
 /* HEADER
 /* ------------------------------------------- */
 
-.header {
+// Container-1 is a container that creates css grid rows/columns.
+.container-1 {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+}
 
-    background-image: linear-gradient(rgba($color-primary-dark, .63), rgba($color-primary-dark, .83)), url(../images/nyc-1.jpeg);
+.side-img {
+
+    // Grid Setup
+    grid-row: 1 / 1;
+    grid-column: 6 / 9;
+
+    background-image: url(../images/eminem-2-bw.png);
+    background-position: 40% 2%;
+    background-repeat: no-repeat;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.header-1 {
+
+    // Grid Setup
+    grid-row: 1 / 1;
+    grid-column: 1 / 8;
+
+    //background-image: linear-gradient(rgba($color-primary-dark, .63), rgba($color-primary-dark, .83)), url(../images/nyc-1.jpeg);
+    background-color: #292929;
     background-size: cover;
     background-position: center;
+    -webkit-clip-path: polygon(0 0, 80% 0, 95% 100%, 0% 100%);
+    clip-path: polygon(0 0, 80% 0, 95% 100%, 0% 100%);
+
     height: 100vh;
 
-
     // Part that is mandatory for pre-loader to work
-    display: none;
+    display: none; 
+
+    // Eminem logo
+    &__logo {
+
+        height: 15rem;
+
+        // Grid Setup
+        grid-row: 2 / 3;
+        grid-column: 3 / 14;
+        justify-self: center;
+        align-self: center;
+    }
+
+    // h1 heading
+    &__heading {
+
+        font-size: 3rem;
+        letter-spacing: 2rem;
+
+        // Grid Setup
+        grid-row: 3 / 4;
+        grid-column: 5 / 12;
+        align-self: flex-end;
+        justify-self: center;
+    }
+
+    &__button {
+
+        text-align: center;
+
+        // Grid Setup
+        grid-row: 4 / 5;
+        grid-column: 6 / 8;
+    }
+
+    &__button-2 {
+
+        text-align: center;
+
+        // Grid Setup
+        grid-row: 4 / 5;
+        grid-column: 9 / 11;
+    }
+}
+
+.wrapper {
+    // Grid Setup
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(18, 1fr);
 }

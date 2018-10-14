@@ -1,0 +1,119 @@
+/* ------------------------------------------- */
+/* TYPOGRAPHY
+/* ------------------------------------------- */
+
+body {
+    font-family: 'Josefin Sans', 'Arial', 'sans-serif';
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-grey-dark-1;
+}
+
+/* ------------------------------------------- */
+/* HEADING PRIMARY | TEXT / STYLE H1
+/* ------------------------------------------- */
+
+.heading-1 {
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+
+        /* -- ANIMATION IMPLEMENTATION -- */
+        animation-name: moveInLeft;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+
+        // * --- MEDIA QUERIES --- * \\
+        @include respond(phone) {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
+    }
+
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+
+        /* -- ANIMATION IMPLEMENTATION -- */
+        animation-name: moveInRight;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+
+        // * --- MEDIA QUERIES --- * \\
+        @include respond(phone) {
+            letter-spacing: .5rem;
+        }
+    }
+}
+
+/* ------------------------------------------- */
+/* HEADING SECONDARY | TEXT / STYLE H2
+/* ------------------------------------------- */
+
+.heading-2 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    // SETUP THE TEXT (h2) TO DISPLAY WITH MULTIPLE COLORS IN THE BACKGROUND \\
+    display: inline-block;
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text;
+    color: transparent;
+    /*letter-spacing: .2rem;
+    transition: all .2s; */ // UNCOMMENT FOR ANIMATION EFFECT
+
+    /*
+    &:hover {
+        transform: skewY(2deg);
+    } */ // UNCOMMENT FOR ANIMATION EFFECT
+
+        // * --- MEDIA QUERIES --- * \\
+        @include respond(tab-port) {
+            font-size: 3rem;
+        }
+    
+        @include respond(phone) {
+            font-size: 2.5rem;
+        }
+    }
+
+/* --------------------------------------------- */
+/* HEADING TERTIARY + PARAGRAPH| TEXT / STYLE H3/P
+/* --------------------------------------------- */
+
+.heading-3{
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    // * --- MEDIA QUERIES --- * \\
+    @include respond(phone) {
+        text-align: center;
+    }
+}
+
+.heading-4 {
+    font-weight: 400;
+    font-size: 1.9rem;
+
+    // LIGHT AND DARK VERSION OF HEADING 4 \\
+    &--light { color: $color-grey-light-1; }
+    &--dark { color: $color-grey-dark-1; }
+}
+
+.paragraph {
+    font-size: 1.6rem;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}

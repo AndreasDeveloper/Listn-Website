@@ -5,7 +5,7 @@
 var preLoader;
 
 function preLoaderFun() {
-    preLoader = setTimeout(showPage, 1000); // Determines for how long will pre-loader "load"
+    preLoader = setTimeout(showPage, 300); // Determines for how long will pre-loader "load".
 }
 
 // Shows Page

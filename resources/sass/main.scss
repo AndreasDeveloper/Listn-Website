@@ -10,9 +10,12 @@
 /* --- BASE --- */
 @import "resources/sass/base/_base.scss";
 @import "resources/sass/base/_utilities.scss";
+@import "resources/sass/base/_typography.scss";
 
 /* --- COMPONENTS --- */
+@import "resources/sass/components/_buttons.scss";
 @import "resources/sass/components/_pre-loader.scss";
+@import "resources/sass/components/_slider.scss";
 
 /* --- LAYOUT --- */ 
 @import "resources/sass/layout/_header.scss";
