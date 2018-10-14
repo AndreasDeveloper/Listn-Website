@@ -556,9 +556,6 @@ body {
       .header-1__heading {
         grid-column: 2 / 13;
         text-align: center; } }
-    @media all and (min--moz-device-pixel-ratio: 0) and (max-width: 62.5em) {
-      .header-1__heading {
-        grid-column: 5 / 13; } }
   .header-1__button {
     text-align: center;
     letter-spacing: .2rem;

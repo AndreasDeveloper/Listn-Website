@@ -1,0 +1,98 @@
+/* ------------------------------------------- */
+/* TEXT REVEAL 
+/* ------------------------------------------- */
+
+// --- REV BLOCK 1 --- \\
+.rev-block {
+    position: relative;
+}
+
+.rev-block span {
+    opacity: 0;
+    animation: appear-text 0.0001s linear forwards;
+    animation-delay: .6s;
+}
+
+.rev-block::after {
+    content: "";
+    top: 0;
+    left: 0%;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: $color-primary;
+    animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: .4s;
+}
+
+// --- REV BLOCK 2 --- \\
+.rev-block-2 {
+    position: relative;
+    //left: 62%;
+}
+
+.rev-block-2 span {
+    opacity: 0;
+    animation: appear-text 0.0001s linear forwards;
+    animation-delay: 2.4s;
+}
+
+.rev-block-2::after {
+    content: "";
+    top: 0;
+    left: 0%;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: $color-primary;
+    animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 2s;
+}
+
+// --- REV BLOCK 3 --- \\
+.rev-block-3 {
+    position: relative;
+    //left: 38%;
+}
+
+.rev-block-3 span {
+    opacity: 0;
+    animation: appear-text 0.0001s linear forwards;
+    animation-delay: 3.4s;
+}
+
+.rev-block-3::after {
+    content: "";
+    top: 0;
+    left: 0%;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: $color-primary;
+    animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 3s;
+}
+
+// --- REV BLOCK 4 --- \\
+.rev-block-4 {
+    position: relative;
+    //left: 82.5%;
+}
+
+.rev-block-4 span {
+    opacity: 0;
+    animation: appear-text 0.0001s linear forwards;
+    animation-delay: 4.4s;
+}
+
+.rev-block-4::after {
+    content: "";
+    top: 0;
+    left: 0%;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: $color-primary;
+    animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 4s;
+}
