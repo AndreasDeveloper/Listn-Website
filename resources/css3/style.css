@@ -112,11 +112,11 @@
   70% {
     left: -200%; }
   75% {
-    left: -300%; }
+    left: -200%; }
   95% {
-    left: -300%; }
+    left: 0; }
   100% {
-    left: -400%; } }
+    left: 0; } }
 
 /* ------------------------------------------- */
 /* COLOR VARIABLES
@@ -714,13 +714,13 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 400%;
+  width: 300%;
   height: 100%;
   float: left;
   animation: animate 30s linear infinite; }
 
 .slide {
-  width: 25%;
+  width: 33.33333333333333%;
   height: 100%;
   float: left; }
 
