@@ -189,18 +189,20 @@
     grid-template-rows: repeat(8, 1fr);
     grid-template-columns: repeat(8, 1fr);
 
-    background-color: #292929;
+    background-color: $color-bk;
     background-size: cover;
     background-position: center;
     -webkit-clip-path: polygon(0 0, 80% 0, 95% 100%, 0% 100%);
     clip-path: polygon(0 0, 80% 0, 95% 100%, 0% 100%);
 
     &__logo {
-        height: 15rem;
+        height: 30rem;
 
         // CSS Grid
         grid-row: 2 / 3;
-        grid-column: 2 / 6;
+        grid-column: 3 / 5;
+        justify-self: center;
+        align-self: center;
     }
 
     &__heading {
@@ -244,14 +246,14 @@
     grid-template-rows: repeat(8, 1fr);
     grid-template-columns: repeat(8, 1fr);
 
-    background-color: #292929;
+    background-color: $color-bk;
     background-size: cover;
     background-position: center;
     -webkit-clip-path: polygon(0 0, 80% 0, 95% 100%, 0% 100%);
     clip-path: polygon(0 0, 80% 0, 95% 100%, 0% 100%);
 
     &__logo {
-        height: 20rem;
+        height: 25rem;
         
         // CSS Grid
         grid-row: 2 / 3;
@@ -299,7 +301,7 @@
     grid-template-rows: repeat(8, 1fr);
     grid-template-columns: repeat(8, 1fr);
 
-    background-color: #292929;
+    background-color: $color-bk;
     background-size: cover;
     background-position: center;
     -webkit-clip-path: polygon(0 0, 80% 0, 95% 100%, 0% 100%);
