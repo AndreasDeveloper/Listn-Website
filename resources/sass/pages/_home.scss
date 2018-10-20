@@ -189,7 +189,8 @@
     grid-template-columns: repeat(6, 1fr);
 
     &__image {
-        height: 50rem;
+        height: 30rem;
+        overflow: hidden;
 
         // CSS Grid
         grid-row: 1 / 3;
