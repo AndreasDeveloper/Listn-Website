@@ -28,6 +28,11 @@
         @include respond(tab-port) {
             margin-bottom: 0;
         }
+
+        // Better apporach of using Media Queries
+        @media only screen and (max-width: $bp-desktop) {
+            font-size: 4.5rem;
+        }
     }
 
     &:hover {

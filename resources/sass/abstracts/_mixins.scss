@@ -117,7 +117,7 @@ $bp-vsmall-3: 23.75em; // 375px
     }
 
     @if $breakpoint == small-desktop {
-        @media (min-width: 86.375em)   { @content };   // 1382px
+        @media (min-width: 86.875em)   { @content };   // 1390px
     }
 
     @if $breakpoint == big-desktop {

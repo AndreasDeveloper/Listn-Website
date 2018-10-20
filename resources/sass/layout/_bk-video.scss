@@ -1,0 +1,22 @@
+/* ------------------------------------------- */
+/* FEEL THE MUSIC | BACKGROUND VIDEO
+/* ------------------------------------------- */
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .85;
+    overflow: hidden;
+    filter: grayscale(100%);
+
+    &__content {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; // FITS THE VIDEO / BACKGROUND IN SECTION WITH MAINTAINING ASPECT RATIO
+        object-position: center;
+    }
+}

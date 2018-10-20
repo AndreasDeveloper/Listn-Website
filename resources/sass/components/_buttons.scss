@@ -98,3 +98,41 @@
 .btn-full-2:hover::before {
    height: 450%;
 }
+
+/* ------------------------------------------- */
+/* BUTTON TEXT | ABOUT US
+/* ------------------------------------------- */
+
+.btn-text {
+
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        color: $color-white;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: .1rem solid $color-primary-light;
+        padding: .3rem;
+        transition: all .2s;
+        position: relative;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+        transform: translateY(0);
+    }
+
+    // * --- MEDIA QUERIES --- * \\
+    @include respond(phone) {
+        position: absolute;
+        top: 0;
+        left: 1rem;
+    }
+}
