@@ -509,6 +509,140 @@ body {
 /* ------------------------------------------- */
 /* MUSIC PREVIEW
 /* ------------------------------------------- */
+.section-mp {
+  display: grid;
+  grid-template-rows: repeat(6, 9vw);
+  grid-template-columns: repeat(12, 1fr); }
+
+.previewer-bk {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  overflow: hidden; }
+  .previewer-bk__black-layer {
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    position: absolute;
+    z-index: 1; }
+  .previewer-bk__img {
+    height: 120vh;
+    width: 105%;
+    -webkit-filter: blur(0.6rem);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99; }
+
+.previewer {
+  background-color: #000;
+  border-radius: 1.5rem;
+  z-index: 999;
+  grid-row: 2 / 5;
+  grid-column: 3 / 5; }
+  @media only screen and (max-width: 86.875em) {
+    .previewer {
+      grid-row: 2 / 6;
+      grid-column: 3 / 5; } }
+
+.image__img {
+  height: 18rem;
+  width: 100%;
+  margin-top: -.5rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem; }
+
+.player {
+  padding: 2.5rem;
+  color: #333;
+  position: relative; }
+  .player__song-title {
+    font-family: 'Josefin Sans';
+    font-size: 1.8rem;
+    text-align: center;
+    color: #fff; }
+
+.buttons {
+  height: 5rem;
+  width: 100%;
+  margin-top: 5rem;
+  position: relative;
+  top: 20%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  font-size: 3rem;
+  color: #fff; }
+  .buttons__prev {
+    position: absolute;
+    left: -10%; }
+  .buttons__play {
+    border: 0;
+    color: #fff;
+    border-radius: 50%;
+    outline: none;
+    position: absolute;
+    left: 20%; }
+  .buttons__next {
+    position: absolute;
+    left: 45%; }
+
+.seek-bar {
+  width: 16rem;
+  height: .5rem;
+  background-color: #fff;
+  display: flex;
+  border-radius: 5rem;
+  margin-left: 2.5rem;
+  cursor: pointer; }
+  @media only screen and (max-width: 86.875em) {
+    .seek-bar {
+      width: 13rem; } }
+
+.fill {
+  height: .5rem;
+  width: 1rem;
+  background-color: #c69963;
+  border-radius: 2rem; }
+
+.handle {
+  width: .8rem;
+  height: .8rem;
+  background-color: #c69963;
+  border-radius: 50%;
+  margin-left: -.5rem;
+  transform: scale(2.1); }
+
+.current-time {
+  color: #fff;
+  font-family: 'Josefin Sans';
+  position: absolute;
+  top: 110%;
+  left: 35%; }
+
+.previewer-2 {
+  background-color: #000;
+  border-radius: 1.5rem;
+  z-index: 999;
+  grid-row: 2 / 5;
+  grid-column: 6 / 8; }
+  @media only screen and (max-width: 86.875em) {
+    .previewer-2 {
+      grid-row: 2 / 6;
+      grid-column: 6 / 8; } }
+
+.previewer-3 {
+  background-color: #000;
+  border-radius: 1.5rem;
+  z-index: 999;
+  grid-row: 2 / 5;
+  grid-column: 9 / 11; }
+  @media only screen and (max-width: 86.875em) {
+    .previewer-3 {
+      grid-row: 2 / 6;
+      grid-column: 9 / 11; } }
+
 /* ------------------------------------------- */
 /* PRE-LOADER 
 /* ------------------------------------------- */

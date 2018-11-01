@@ -154,12 +154,82 @@
 
         <!-- SECTION MUSIC PREVIEW | START -->
         <section class="section-mp">
-            
+            <div class="previewer-bk">
+                <div class="previewer-bk__black-layer"></div>
+                <img src="resources/images/bk-2.jpg" alt="Kamikaze Album Cover" class="previewer-bk__img">
+            </div> 
+
+            <!-- PREVIEW 1 -->
+            <div class="previewer">
+                <div class="image">
+                    <img src="resources/images/kamikaze-bk.jpg" alt="Kamikaze Album Cover" class="image__img">
+                </div>
+                <div class="player">
+                    <div id="song-title" class="player__song-title">Lucky You</div>
+                    <div class="buttons">
+                        <i id='prev' onclick="prev()" class="icon ion-md-skip-backward buttons__prev"></i>
+                        <i id='play' onclick="playNPauseSong()" class="icon ion-md-pause buttons__play"></i>
+                        <i id='next' onclick="next()" class="icon ion-md-skip-forward buttons__next"></i>
+                    </div>
+                    
+                    <div class="seek-bar">
+                        <div id="fill" class="fill"></div>
+                        <div class="handle"></div>
+                    </div>
+                    <div id="current-time" class="current-time">00:00 / 00:00</div>
+                </div>
+            </div>
+            <!-- PREVIEW 1 -->
+
+            <!-- PREVIEW 2 -->
+            <div class="previewer-2">
+                    <div class="image">
+                        <img src="resources/images/kamikaze-bk.jpg" alt="Kamikaze Album Cover" class="image__img">
+                    </div>
+                    <div class="player">
+                        <div id="song-title" class="player__song-title">Lucky You</div>
+                        <div class="buttons">
+                            <i id='prev' onclick="prev()" class="icon ion-md-skip-backward buttons__prev"></i>
+                            <i id='play' onclick="playNPauseSong()" class="icon ion-md-pause buttons__play"></i>
+                            <i id='next' onclick="next()" class="icon ion-md-skip-forward buttons__next"></i>
+                        </div>
+                        
+                        <div class="seek-bar">
+                            <div id="fill" class="fill"></div>
+                            <div class="handle"></div>
+                        </div>
+                        <div id="current-time" class="current-time">00:00 / 00:00</div>
+                    </div>
+                </div>
+            <!-- PREVIEW 2 -->
+
+            <!-- PREVIEW 3 -->
+            <div class="previewer-3">
+                <div class="image">
+                    <img src="resources/images/kamikaze-bk.jpg" alt="Kamikaze Album Cover" class="image__img">
+                </div>
+                    <div class="player">
+                        <div id="song-title" class="player__song-title">Lucky You</div>
+                        <div class="buttons">
+                            <i id='prev' onclick="prev()" class="icon ion-md-skip-backward buttons__prev"></i>
+                            <i id='play' onclick="playNPauseSong()" class="icon ion-md-pause buttons__play"></i>
+                            <i id='next' onclick="next()" class="icon ion-md-skip-forward buttons__next"></i>
+                        </div>
+                        
+                        <div class="seek-bar">
+                            <div id="fill" class="fill"></div>
+                            <div class="handle"></div>
+                        </div>
+                        <div id="current-time" class="current-time">00:00 / 00:00</div>
+                    </div>
+                </div>
+            <!-- PREVIEW 3 -->
         </section>
         <!-- SECTION MUSIC PREVIEW | END -->
     </main>
 
         <!-- CDN's / JS FILES -->
+        <script src="resources/js/music-preview.js"></script>
         <script src="resources/js/pre-loader.js"></script>
 
     </body>
