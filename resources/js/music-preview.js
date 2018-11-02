@@ -1,7 +1,7 @@
 /// Music Preview JS Setup
 
 // Creating Array with songs
-var songs = ['resources/music-prev/Lucky You.mp3', 'resources/music-prev/Not Alike.mp3', 'resources/music-prev/Venom.mp3'];
+var songs1 = ['resources/music-prev/Lucky You.mp3', 'resources/music-prev/Not Alike.mp3', 'resources/music-prev/Venom.mp3'];
 
 // Creating Array for poster of each song (same in this case for each song)
 var poster = ['resources/images/kamikaze-bk-2.jpg'];
@@ -15,23 +15,23 @@ var currentTime = document.getElementById('current-time');
 var song = new Audio();
 var currentSong = 0;    // Points to the current song
 
-//window.onload = playSong; // Calling the function playSong when window is loaded
+//window.onload = playSong(); // Calling the function playSong when window is loaded
 
 // | FUNCTION | - Plays the song
 function playSong() {
-    song.src = songs[currentSong];  // set the source of the first song
-    //songTitle.textContent = songs[currentSong]; // Set the title of the song
+    song.src = songs1[currentSong];  // set the source of the first song
+    //songTitle.textContent = songs1[currentSong]; // Set the title of the song
     song.play(); // Plays the song
 }
 
 // | FUNCTION | - Play/Pause option for the player
 function playNPauseSong() {
-    if(song.paused) {
+    if (song.paused) {
         song.play();
-        $('#play').attr('class', 'icon ion-md-pause buttons__play');
+        $('#playI i').attr('class', 'icon ion-md-pause buttons__play');
     } else {
         song.pause();
-        $('#play').attr('class', 'icon ion-md-play buttons__play');
+        $('#playI i').attr('class', 'icon ion-md-play buttons__play');
     }
 }
 
@@ -41,6 +41,7 @@ function next() {
     if (currentSong > 2) {
         currentSong = 0;
     }
+    playNPauseSong();
     playSong();
     $('#play').attr();
 }

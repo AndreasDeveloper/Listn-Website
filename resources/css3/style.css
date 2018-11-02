@@ -509,139 +509,338 @@ body {
 /* ------------------------------------------- */
 /* MUSIC PREVIEW
 /* ------------------------------------------- */
+/*
 .section-mp {
-  display: grid;
-  grid-template-rows: repeat(6, 9vw);
-  grid-template-columns: repeat(12, 1fr); }
 
+    // CSS Grid
+    display: grid;
+    grid-template-rows: repeat(6, 8vw);
+    grid-template-columns: repeat(12, 1fr);
+
+    position: relative;
+}
+
+// THIS IS THE BACKGROUND
 .previewer-bk {
-  height: 100vh;
-  width: 100%;
-  position: absolute;
-  overflow: hidden; }
-  .previewer-bk__black-layer {
     height: 100vh;
     width: 100%;
-    background-color: #000;
     position: absolute;
-    z-index: 1; }
-  .previewer-bk__img {
-    height: 120vh;
-    width: 105%;
-    -webkit-filter: blur(0.6rem);
+    overflow: hidden;
+
+    &__black-layer {
+        height: 100vh;
+        width: 100%;
+        background-color: $color-black;
+        position: absolute;
+        z-index: 1;
+    }
+
+    &__img {
+        height: 120vh;
+        width: 105%;
+        -webkit-filter: blur(.6rem);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 99;
+    }
+}
+
+
+// Previewer 1 ------
+.previewer {
+    background-color: $color-black;
+    border-radius: 1.5rem;
+    z-index: 999;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 99; }
+    padding-bottom: 6rem;
+    box-shadow: 0 1rem 2rem rgba($color-black, .80);
 
-.previewer {
-  background-color: #000;
-  border-radius: 1.5rem;
-  z-index: 999;
-  grid-row: 2 / 5;
-  grid-column: 3 / 5; }
-  @media only screen and (max-width: 86.875em) {
-    .previewer {
-      grid-row: 2 / 6;
-      grid-column: 3 / 5; } }
+    // CSS Grid Setup
+    grid-row: 2 / 5;
+    grid-column: 3 / 5;
+    
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-desktop) {
+        grid-row: 2 / 6;
+        grid-column: 3 / 5;
+    }
+    
+}
 
-.image__img {
-  height: 18rem;
-  width: 100%;
-  margin-top: -.5rem;
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem; }
+.image {
+
+    &__img {
+        height: 18rem;
+        width: 100%;
+        margin-top: -.5rem;
+        border-top-left-radius: 1.5rem;
+        border-top-right-radius: 1.5rem;
+    }
+}
 
 .player {
-  padding: 2.5rem;
-  color: #333;
-  position: relative; }
-  .player__song-title {
-    font-family: 'Josefin Sans';
-    font-size: 1.8rem;
-    text-align: center;
-    color: #fff; }
+    padding: 2.5rem;
+    color: #333;
+    position: relative;
+
+    &__song-title {
+        font-family: 'Josefin Sans';
+        font-size: 1.8rem;
+        text-align: center;
+        color: $color-white;
+    }
+}
+
 
 .buttons {
-  height: 5rem;
-  width: 100%;
-  margin-top: 5rem;
-  position: relative;
-  top: 20%;
-  left: 75%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-  font-size: 3rem;
-  color: #fff; }
-  .buttons__prev {
-    position: absolute;
-    left: -10%; }
-  .buttons__play {
-    border: 0;
-    color: #fff;
-    border-radius: 50%;
-    outline: none;
-    position: absolute;
-    left: 20%; }
-  .buttons__next {
-    position: absolute;
-    left: 45%; }
+    height: 5rem;
+    width: 100%;
+    margin-top: 5rem;
+    position: relative;
+    top: 20%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    font-size: 3rem;
+    color: $color-white;
+
+    &__prev {
+        position: absolute;
+        left: -10%;
+    }
+    
+    &__play {
+        border: 0;
+        color: $color-white;
+        border-radius: 50%;
+        outline: none;
+        position: absolute;
+        top: 1%;
+        left: 20%;
+        fill: $color-white;
+    }
+
+    &__next {
+        position: absolute;
+        left: 45%;
+    }
+}
 
 .seek-bar {
-  width: 16rem;
-  height: .5rem;
-  background-color: #fff;
-  display: flex;
-  border-radius: 5rem;
-  margin-left: 2.5rem;
-  cursor: pointer; }
-  @media only screen and (max-width: 86.875em) {
-    .seek-bar {
-      width: 13rem; } }
+    width: 16rem;
+    height: .5rem;
+    background-color: $color-white;
+    display: flex;
+    border-radius: 5rem;
+    margin-left: 2.5rem;
+    cursor: pointer;
+
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-desktop) {
+        width: 13rem;
+    }
+}
 
 .fill {
-  height: .5rem;
-  width: 1rem;
-  background-color: #c69963;
-  border-radius: 2rem; }
+    height: .5rem;
+    width: 1rem;
+    background-color: $color-primary;
+    border-radius: 2rem;
+}
 
 .handle {
-  width: .8rem;
-  height: .8rem;
-  background-color: #c69963;
-  border-radius: 50%;
-  margin-left: -.5rem;
-  transform: scale(2.1); }
+    width: .8rem;
+    height: .8rem;
+    background-color: $color-primary;
+    border-radius: 50%;
+    margin-left: -.5rem;
+    transform: scale(2.1);
+}
 
 .current-time {
-  color: #fff;
-  font-family: 'Josefin Sans';
-  position: absolute;
-  top: 110%;
-  left: 35%; }
+    color: $color-white;
+    font-family: 'Josefin Sans';
+    position: absolute;
+    top: 110%;
+    left: 35%;
+}
 
+// Previewer 2 ------
 .previewer-2 {
-  background-color: #000;
-  border-radius: 1.5rem;
-  z-index: 999;
-  grid-row: 2 / 5;
-  grid-column: 6 / 8; }
-  @media only screen and (max-width: 86.875em) {
-    .previewer-2 {
-      grid-row: 2 / 6;
-      grid-column: 6 / 8; } }
+    background-color: $color-black;
+    border-radius: 1.5rem;
+    z-index: 999;
 
+    // CSS Grid Setup
+    grid-row: 2 / 5;
+    grid-column: 6 / 8;
+
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-desktop) {
+        grid-row: 2 / 6;
+        grid-column: 6 / 8;
+    }
+}
+
+// Previewer 3 ------
 .previewer-3 {
-  background-color: #000;
-  border-radius: 1.5rem;
-  z-index: 999;
-  grid-row: 2 / 5;
-  grid-column: 9 / 11; }
+    background-color: $color-black;
+    border-radius: 1.5rem;
+    z-index: 999;
+
+    // CSS Grid Setup
+    grid-row: 2 / 5;
+    grid-column: 9 / 11;
+
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-desktop) {
+        grid-row: 2 / 6;
+        grid-column: 9 / 11;
+    }
+}
+*/
+.container-1 {
+  position: relative;
+  overflow: hidden;
+  width: 100%; }
+
+.content-ap-1 {
+  grid-row: 1 / 8;
+  grid-column: 1 / 12;
+  display: grid;
+  grid-template-rows: repeat(8, 8vw);
+  grid-template-columns: repeat(12, 1fr);
+  background-image: url(../images/bk-2-bw.png);
+  background-position: center;
+  background-size: cover; }
+
+.content-ap-2 {
+  grid-row: 1 / 8;
+  grid-column: 1 / 12;
+  display: grid;
+  grid-template-rows: repeat(8, 8vw);
+  grid-template-columns: repeat(12, 1fr); }
+
+.music-preview-tab {
+  background-color: rgba(0, 0, 0, 0.9);
+  border: #c69963 solid 0.1rem;
+  grid-row: 3 / 7;
+  grid-column: 2 / 5;
+  display: grid;
+  grid-template-rows: repeat(26, 1fr);
+  grid-template-columns: repeat(16, 1fr); }
   @media only screen and (max-width: 86.875em) {
-    .previewer-3 {
-      grid-row: 2 / 6;
-      grid-column: 9 / 11; } }
+    .music-preview-tab {
+      grid-row: 3 / 8; } }
+  .music-preview-tab__image {
+    grid-row: 5 / 6;
+    grid-column: 1 / -1;
+    justify-self: center; }
+  .music-preview-tab__button {
+    text-align: center;
+    letter-spacing: .1rem;
+    grid-row: 21 / 22;
+    grid-column: 1 / -1;
+    justify-self: center; }
+  .music-preview-tab__el-1 {
+    padding-left: 5.5rem;
+    transition: all .2s;
+    grid-row: 9 / 10;
+    grid-column: 2 / 16; }
+    .music-preview-tab__el-1:hover {
+      transform: scale(1.1); }
+  .music-preview-tab__el-2 {
+    padding-left: 5.5rem;
+    transition: all .2s;
+    grid-row: 12 / 13;
+    grid-column: 2 / 16; }
+    .music-preview-tab__el-2:hover {
+      transform: scale(1.1); }
+  .music-preview-tab__el-3 {
+    padding-left: 5.5rem;
+    transition: all .2s;
+    grid-row: 15 / 16;
+    grid-column: 2 / 16; }
+    .music-preview-tab__el-3:hover {
+      transform: scale(1.1); }
+
+.music-tab-1 {
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(178, 132, 81, 0.6); }
+  .music-tab-1__icon {
+    position: absolute;
+    top: 2%;
+    left: 6%;
+    font-size: 2.6rem;
+    cursor: pointer; }
+
+.music-tab-2 {
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(153, 153, 153, 0.1); }
+  .music-tab-2__icon {
+    position: absolute;
+    top: 2%;
+    left: 6%;
+    font-size: 2.6rem;
+    cursor: pointer; }
+
+.music-tab-3 {
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(153, 153, 153, 0.1); }
+  .music-tab-3__icon {
+    position: absolute;
+    top: 2%;
+    left: 6%;
+    font-size: 2.6rem;
+    cursor: pointer; }
+
+.mt-name {
+  font-size: 1.7rem; }
+  @media only screen and (max-width: 86.875em) {
+    .mt-name {
+      font-size: 1.4rem; } }
+
+.about-album-tab {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 1rem 2rem 0 2rem;
+  grid-row: 3 / 7;
+  grid-column: 5 / 10; }
+  @media only screen and (max-width: 86.875em) {
+    .about-album-tab {
+      grid-row: 3 / 8; } }
+  .about-album-tab__heading {
+    font-size: 3rem; }
+    @media only screen and (max-width: 86.875em) {
+      .about-album-tab__heading {
+        font-size: 2.5rem; } }
+  .about-album-tab__paragraph {
+    font-size: 2rem; }
+    @media only screen and (max-width: 86.875em) {
+      .about-album-tab__paragraph {
+        font-size: 1.9rem; } }
+
+.special-s {
+  color: #c69963;
+  text-decoration: none;
+  transition: all .2s; }
+  .special-s:hover {
+    transform: scale(2); }
+
+.ap-name {
+  height: 35rem;
+  grid-row: 1 / 3;
+  grid-column: 1 / -1;
+  justify-self: center;
+  align-self: center; }
 
 /* ------------------------------------------- */
 /* PRE-LOADER 
@@ -683,8 +882,51 @@ body {
     animation: bounceShadow .75s infinite linear; }
 
 /* ------------------------------------------- */
-/* SLIDER
+/* SLIDER | HEADER
 /* ------------------------------------------- */
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh; }
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 100%;
+  float: left;
+  animation: animate 30s linear infinite; }
+
+.slide {
+  width: 33.33333333333333%;
+  height: 100%;
+  float: left; }
+
+.slide-1 {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(8, 1fr); }
+
+.slide-2 {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(8, 1fr); }
+
+.slide-3 {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(8, 1fr); }
+
+/* ------------------------------------------- */
+/* SLIDER | ALBUM PREVIEW | AP
+/* ------------------------------------------- */
+.slide-ap-1 {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(8, 1fr); }
+
 /* ------------------------------------------- */
 /* TEXT REVEAL 
 /* ------------------------------------------- */
@@ -790,173 +1032,6 @@ body {
 /* ------------------------------------------- */
 /* HEADER
 /* ------------------------------------------- */
-/*
-.container-1 {
-    display: grid;
-    grid-template-rows: repeat(1, 1fr);
-    grid-template-columns: repeat(8, 1fr);
-}
-
-// Image on the side of the grey background
-.side-img {
-
-    // Grid Setup
-    grid-row: 1 / 1;
-    grid-column: 6 / 9;
-
-    background-image: url(../images/eminem-2-bw.png);
-    background-position: 40% 2%;
-    background-repeat: no-repeat;
-    max-height: 100%;
-    max-width: 100%;
-}
-
-.header-1 {
-
-    // Grid Setup
-    grid-row: 1 / 1;
-    grid-column: 1 / 8;
-
-    // * --- MEDIA QUERIES --- * \\
-    @media only screen and (max-width: $bp-large) {
-        -webkit-clip-path: polygon(0 0, 67% 0, 77% 100%, 0% 100%);
-        clip-path: polygon(0 0, 67% 0, 77% 100%, 0% 100%);
-        background-position: left;
-    }
-
-    //background-image: linear-gradient(rgba($color-primary-dark, .63), rgba($color-primary-dark, .83)), url(../images/nyc-1.jpeg);
-    background-color: #292929;
-    background-size: cover;
-    background-position: center;
-    -webkit-clip-path: polygon(0 0, 80% 0, 95% 100%, 0% 100%);
-    clip-path: polygon(0 0, 80% 0, 95% 100%, 0% 100%);
-
-    height: 100vh;
-
-    // Part that is mandatory for pre-loader to work
-    display: none; 
-
-    // Eminem logo
-    &__logo {
-
-        height: 15rem;
-
-        // Grid Setup
-        grid-row: 2 / 3;
-        grid-column: 3 / 14;
-        justify-self: center;
-        align-self: center;
-
-         // * --- MEDIA QUERIES --- * \\
-         @media only screen and (max-width: $bp-large) {
-            height: 10rem; 
-
-             grid-column: 2 / 12;
-         }
-    }
-
-    // h1 heading
-    &__heading {
-
-        font-size: 3rem;
-        letter-spacing: 2rem;
-
-        // Grid Setup
-        grid-row: 3 / 4;
-        grid-column: 5 / 12;
-        align-self: flex-end;
-        justify-self: center;
-
-        // * --- MEDIA QUERIES --- * \\
-        @media only screen and (max-width: $bp-desktop) {
-            grid-column: 4 / 13;
-        }
-
-        @media only screen and (max-width: $bp-large) {
-            grid-column: 2 / 13;
-            text-align: center;
-        }
-
-        // Media Query for Firefox ONLY \\
-        @media all and (min--moz-device-pixel-ratio:0) and (max-width: $bp-large) {
-            grid-column: 5 / 13;
-        }
-    }
-
-    &__button {
-
-        text-align: center;
-        letter-spacing: .2rem;
-
-        // Grid Setup
-        grid-row: 4 / 5;
-        grid-column: 6 / 8;
-
-         // * --- MEDIA QUERIES --- * \\
-         @media only screen and (max-width: $bp-large) {
-            grid-column: 4 / 6;
-         }
-    }
-
-    &__button-2 {
-
-        text-align: center;
-        letter-spacing: .2rem;
-
-        // Grid Setup
-        grid-row: 4 / 5;
-        grid-column: 9 / 11;
-
-        
-         // * --- MEDIA QUERIES --- * \\
-         @media only screen and (max-width: $bp-large) {
-            grid-column: 7 / 9;
-         }
-    }
-}
-
-.wrapper {
-    // Grid Setup
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(18, 1fr);
-}
-*/
-.container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh; }
-
-.slider {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 300%;
-  height: 100%;
-  float: left;
-  animation: animate 30s linear infinite; }
-
-.slide {
-  width: 33.33333333333333%;
-  height: 100%;
-  float: left; }
-
-.slide-1 {
-  display: grid;
-  grid-template-rows: repeat(1, 1fr);
-  grid-template-columns: repeat(8, 1fr); }
-
-.slide-2 {
-  display: grid;
-  grid-template-rows: repeat(1, 1fr);
-  grid-template-columns: repeat(8, 1fr); }
-
-.slide-3 {
-  display: grid;
-  grid-template-rows: repeat(1, 1fr);
-  grid-template-columns: repeat(8, 1fr); }
-
 .content-1 {
   grid-row: 1 / 6;
   grid-column: 1 / 8;
