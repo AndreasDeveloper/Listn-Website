@@ -188,35 +188,35 @@
             <div id="album-preview" class="sliderz">
                 <!-- SLIDE 1 -->
                 <div class="slidez slide-ap-1">
-
                     <!-- TAB 1 | MUSIC PREVIEW -->
                     <div class="content-ap-1">
                         <img src="resources/images/kamikaze-p.png" alt="Kamikaze Preview" class="ap-name">
+                        <i class="icon ion-md-arrow-forward content-ap-1__icon-right"></i>
+                        <i class="icon ion-md-arrow-back content-ap-1__icon-left"></i>
                         <div id="mp-tab" class="music-preview-tab">
                             <!--LISTN NOW TEXT LOGO NEEDED HERE-->
                             <div class="music-preview-tab__image"><img src="resources/images/kamikaze-bk.jpg" alt="Kamikaze Album Cover"></div>
                             <!-- MUSIC PREVIEW TAB - 1 -->
                             <div class="music-preview-tab__el-1 music-tab-1">
-                                <i class="icon ion-md-play music-tab-1__icon"></i>
+                                <div id="playI"><i id="play" onclick="playNPauseSong()" class="icon ion-md-play music-tab-1__icon"></i></div>
                                 <h4 class="heading-4 music-tab-1__name mt-name">Eminem ft. Joyner Lucas - Lucky You</h4>
                                 <div id="current-time" class="current-time">00:00 / 00:00</div>
                             </div>
                             <!-- MUSIC PREVIEW TAB - 2 -->
                             <div class="music-preview-tab__el-2 music-tab-2">
-                                <i class="icon ion-md-play music-tab-2__icon"></i>
+                                <div id="playI-2"><i id="play" onclick="playNPauseSong2()" class="icon ion-md-play music-tab-2__icon"></i></div>
                                 <h4 class="heading-4 music-tab-2__name mt-name">Eminem ft. Royce De 5'9" - Not Alike</h4>
-                                <div id="current-time" class="current-time">00:00 / 00:00</div>
+                                <div id="current-time-2" class="current-time-2">00:00 / 00:00</div>
                             </div>
                             <!-- MUSIC PREVIEW TAB - 3 -->
                             <div class="music-preview-tab__el-3 music-tab-3">
-                                <i class="icon ion-md-play music-tab-3__icon"></i>
+                                <div id="playI-3"><i id="play" onclick="playNPauseSong3()" class="icon ion-md-play music-tab-3__icon"></i></div>
                                 <h4 class="heading-4 music-tab-3__name mt-name">Eminem - Venom</h4>
-                                <div id="current-time" class="current-time">00:00 / 00:00</div>
+                                <div id="current-time-3" class="current-time-3">00:00 / 00:00</div>
                             </div>
                             <a href="#" class="btn-text music-preview-tab__button">LISTN All &rarr;</a>
                         </div>
                     </div>
-
                     <!-- TAB 2 | ABOUT ALBUM -->
                     <div class="content-ap-2">
                         <!-- LOGO AS A TEXT HERE NEEDED -->
@@ -224,17 +224,24 @@
                             <!--LISTN NOW TEXT LOGO NEEDED HERE-->
                             <h3 class="heading-3 about-album-tab__heading">Kamikaze Kicking In . .</h3>
                             <p class="paragraph about-album-tab__paragraph">Kamikaze is the tenth studio album by American rapper Eminem. Previously unannounced, the album was released on August 31, 2018.
-                                    Kamikaze was met with generally positive reviews from critics. At Metacritic, which assigns a normalized rating out of 100 to reviews from mainstream 
-                                    publications, the album received an average score of 62, based on 16 reviews. Aggregator AnyDecentMusic gave the album 5.6 out of 10, based on their 
-                                    assessment of the critical consensus. Throughout the album, lyrics criticize other musicians and several have responded publicly. Eminem 
-                                    and rapper Machine Gun Kelly have had an ongoing feud for several years, and Kelly released a diss track in response to "Not Alike" titled 
-                                    "Rap Devil". On streaming music service <a href="#" class="special-s">Spotify</a>, five tracks from Kamikaze were in the top 10 of the week of September 4, including the top two spots.
+                                Kamikaze was met with generally positive reviews from critics. At Metacritic, which assigns a normalized rating out of 100 to reviews from mainstream 
+                                publications, the album received an average score of 62, based on 16 reviews. Aggregator AnyDecentMusic gave the album 5.6 out of 10, based on their 
+                                assessment of the critical consensus. Throughout the album, lyrics criticize other musicians and several have responded publicly. Eminem 
+                                and rapper Machine Gun Kelly have had an ongoing feud for several years, and Kelly released a diss track in response to "Not Alike" titled 
+                                "Rap Devil". On streaming music service <a href="#" class="special-s">Spotify</a>, five tracks from Kamikaze were in the top 10 of the week of September 4, including the top two spots.
                             </p>
                         </div>
                     </div>
 
                     <!-- TAB 3 | BUY ALBUM -->
-
+                    <div class="content-ap-3">
+                        <div id="ba-tab" class="buy-album-tab">
+                            <h3 class="heading-3 buy-album-tab__heading">Get It On</h3>
+                            <i class="icon ion-logo-android buy-album-tab__icon-1 two-i"></i>
+                            <i class="icon ion-logo-apple buy-album-tab__icon-2 two-i" aria-placeholder="Apple"></i>
+                            <a href="#" class="btn-text buy-album-tab__button">More</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

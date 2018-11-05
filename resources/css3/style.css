@@ -718,13 +718,22 @@ body {
   background-image: url(../images/bk-2-bw.png);
   background-position: center;
   background-size: cover; }
-
-.content-ap-2 {
-  grid-row: 1 / 8;
-  grid-column: 1 / 12;
-  display: grid;
-  grid-template-rows: repeat(8, 8vw);
-  grid-template-columns: repeat(12, 1fr); }
+  .content-ap-1__icon-right {
+    color: #fff;
+    font-size: 6rem;
+    cursor: pointer;
+    grid-row: 4 / 5;
+    grid-column: 12 / 13;
+    align-self: center;
+    justify-self: center; }
+  .content-ap-1__icon-left {
+    color: #fff;
+    font-size: 6rem;
+    cursor: pointer;
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+    align-self: center;
+    justify-self: center; }
 
 .music-preview-tab {
   background-color: rgba(0, 0, 0, 0.9);
@@ -808,10 +817,18 @@ body {
     .mt-name {
       font-size: 1.4rem; } }
 
+.content-ap-2 {
+  grid-row: 1 / 8;
+  grid-column: 1 / 12;
+  display: grid;
+  grid-template-rows: repeat(8, 8vw);
+  grid-template-columns: repeat(12, 1fr); }
+
 .about-album-tab {
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(0, 0, 0, 0.9);
   padding: 1rem 2rem 0 2rem;
+  z-index: 10;
   grid-row: 3 / 7;
   grid-column: 5 / 10; }
   @media only screen and (max-width: 86.875em) {
@@ -835,12 +852,55 @@ body {
   .special-s:hover {
     transform: scale(2); }
 
+.content-ap-3 {
+  grid-row: 1 / 8;
+  grid-column: 1 / 12;
+  display: grid;
+  grid-template-rows: repeat(12, 5vw);
+  grid-template-columns: repeat(12, 1fr); }
+
+.buy-album-tab {
+  background-color: rgba(198, 153, 99, 0.5);
+  z-index: 8;
+  grid-row: 5 / 9;
+  grid-column: 9 / 12;
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(6, 1fr); }
+  .buy-album-tab__heading {
+    color: #fff;
+    font-size: 3.5rem;
+    text-align: center;
+    grid-row: 2 / 3;
+    grid-column: 3 / 7;
+    align-self: flex-end;
+    justify-self: center; }
+  .buy-album-tab__icon-1 {
+    grid-row: 3 / 6;
+    grid-column: 3 / 5;
+    justify-self: center; }
+  .buy-album-tab__icon-2 {
+    grid-row: 3 / 6;
+    grid-column: 4 / 7;
+    justify-self: center; }
+  .buy-album-tab__button {
+    margin-left: 4rem;
+    grid-row: 7 / 8;
+    grid-column: 4 / 5;
+    align-self: center;
+    justify-self: center; }
+
 .ap-name {
   height: 35rem;
   grid-row: 1 / 3;
   grid-column: 1 / -1;
   justify-self: center;
   align-self: center; }
+
+.two-i {
+  color: #fff;
+  font-size: 10rem;
+  cursor: pointer; }
 
 /* ------------------------------------------- */
 /* PRE-LOADER 
