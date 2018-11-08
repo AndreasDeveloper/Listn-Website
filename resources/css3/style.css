@@ -48,13 +48,13 @@
 
 @keyframes rev-block-2 {
   0% {
-    left: 40%;
+    left: 47%;
     width: 0%; }
   50% {
-    left: 40%;
-    width: 40%; }
+    left: 47%;
+    width: 28%; }
   100% {
-    left: 81%;
+    left: 75%;
     width: 0%; } }
 
 @keyframes rev-block-3 {
@@ -160,6 +160,294 @@
     - tab-port
     - tab-land
     - big-desktop
+*/
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* MUSIC PREVIEW PLAYER
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* ABOUT ALBUM TAB
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/*
+.section-mp {
+
+    // CSS Grid
+    display: grid;
+    grid-template-rows: repeat(6, 8vw);
+    grid-template-columns: repeat(12, 1fr);
+
+    position: relative;
+}
+
+// THIS IS THE BACKGROUND
+.previewer-bk {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+
+    &__black-layer {
+        height: 100vh;
+        width: 100%;
+        background-color: $color-black;
+        position: absolute;
+        z-index: 1;
+    }
+
+    &__img {
+        height: 120vh;
+        width: 105%;
+        -webkit-filter: blur(.6rem);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 99;
+    }
+}
+
+
+// Previewer 1 ------
+.previewer {
+    background-color: $color-black;
+    border-radius: 1.5rem;
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 6rem;
+    box-shadow: 0 1rem 2rem rgba($color-black, .80);
+
+    // CSS Grid Setup
+    grid-row: 2 / 5;
+    grid-column: 3 / 5;
+    
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-desktop) {
+        grid-row: 2 / 6;
+        grid-column: 3 / 5;
+    }
+    
+}
+
+.image {
+
+    &__img {
+        height: 18rem;
+        width: 100%;
+        margin-top: -.5rem;
+        border-top-left-radius: 1.5rem;
+        border-top-right-radius: 1.5rem;
+    }
+}
+
+.player {
+    padding: 2.5rem;
+    color: #333;
+    position: relative;
+
+    &__song-title {
+        font-family: 'Josefin Sans';
+        font-size: 1.8rem;
+        text-align: center;
+        color: $color-white;
+    }
+}
+
+
+.buttons {
+    height: 5rem;
+    width: 100%;
+    margin-top: 5rem;
+    position: relative;
+    top: 20%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    font-size: 3rem;
+    color: $color-white;
+
+    &__prev {
+        position: absolute;
+        left: -10%;
+    }
+    
+    &__play {
+        border: 0;
+        color: $color-white;
+        border-radius: 50%;
+        outline: none;
+        position: absolute;
+        top: 1%;
+        left: 20%;
+        fill: $color-white;
+    }
+
+    &__next {
+        position: absolute;
+        left: 45%;
+    }
+}
+
+.seek-bar {
+    width: 16rem;
+    height: .5rem;
+    background-color: $color-white;
+    display: flex;
+    border-radius: 5rem;
+    margin-left: 2.5rem;
+    cursor: pointer;
+
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-desktop) {
+        width: 13rem;
+    }
+}
+
+.fill {
+    height: .5rem;
+    width: 1rem;
+    background-color: $color-primary;
+    border-radius: 2rem;
+}
+
+.handle {
+    width: .8rem;
+    height: .8rem;
+    background-color: $color-primary;
+    border-radius: 50%;
+    margin-left: -.5rem;
+    transform: scale(2.1);
+}
+
+.current-time {
+    color: $color-white;
+    font-family: 'Josefin Sans';
+    position: absolute;
+    top: 110%;
+    left: 35%;
+}
+
+// Previewer 2 ------
+.previewer-2 {
+    background-color: $color-black;
+    border-radius: 1.5rem;
+    z-index: 999;
+
+    // CSS Grid Setup
+    grid-row: 2 / 5;
+    grid-column: 6 / 8;
+
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-desktop) {
+        grid-row: 2 / 6;
+        grid-column: 6 / 8;
+    }
+}
+
+// Previewer 3 ------
+.previewer-3 {
+    background-color: $color-black;
+    border-radius: 1.5rem;
+    z-index: 999;
+
+    // CSS Grid Setup
+    grid-row: 2 / 5;
+    grid-column: 9 / 11;
+
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-desktop) {
+        grid-row: 2 / 6;
+        grid-column: 9 / 11;
+    }
+}
+*/
+/*
+// Creating Array with songs
+var songs1 = ['resources/music-prev/Lucky You.mp3', 'resources/music-prev/Not Alike.mp3', 'resources/music-prev/Venom.mp3'];
+
+// Creating Array for poster of each song (same in this case for each song)
+var poster = ['resources/images/kamikaze-bk-2.jpg'];
+
+// DOM | Getting song title and fill bar elements
+var songTitle = document.getElementById('song-title');
+var fillBar = document.getElementById('fill');
+
+var currentTime = document.getElementById('current-time');
+
+var song = new Audio();
+var currentSong = 0;    // Points to the current song
+
+//window.onload = playSong(); // Calling the function playSong when window is loaded
+
+// | FUNCTION | - Plays the song
+function playSong() {
+    song.src = songs1[currentSong];  // set the source of the first song
+    //songTitle.textContent = songs1[currentSong]; // Set the title of the song
+    song.play(); // Plays the song
+}
+
+// | FUNCTION | - Play/Pause option for the player
+function playNPauseSong() {
+    if (song.paused) {
+        song.play();
+        $('#playI i').attr('class', 'icon ion-md-pause buttons__play');
+    } else {
+        song.pause();
+        $('#playI i').attr('class', 'icon ion-md-play buttons__play');
+    }
+}
+
+// | FUNCTION | - Next Song
+function next() {
+    currentSong++;
+    if (currentSong > 2) {
+        currentSong = 0;
+    }
+    playNPauseSong();
+    playSong();
+    $('#play').attr();
+}
+
+// | FUNCTION | - Previous Song
+function prev() {
+    currentSong--;
+    if (currentSong < 0) {
+        currentSong = 2;
+    }
+    playSong();
+    $('#play i').attr('class', 'icon ion-md-pause');
+}
+
+// | FUNCTION | - Converts minutes and seconds from decimals to integers
+function convertTime(seconds) {
+    var min = Math.floor(seconds / 60);
+    var sec = seconds % 60;
+
+    min = (min < 10 ) ? '0' + min : min;
+    sec = (sec < 10) ? '0' + sec : sec;
+    currentTime.textContent = min + ':' + sec;
+
+    totalTime(Math.round(song.duration));
+}
+
+// | FUNCTION | - Shows Total Duration of the song
+function totalTime(seconds) {
+    var min = Math.floor(seconds / 60);
+    var sec = seconds % 60;
+
+    min = (min < 10 ) ? '0' + min : min;
+    sec = (sec < 10) ? '0' + sec : sec;
+    currentTime.textContent += ' / ' + min + ':' + sec;
+}
+
+// | EVENT LISTENER | Track Bar Setup
+song.addEventListener('timeupdate', function() {
+    var position = song.currentTime / song.duration;
+    fillBar.style.width = position * 100 + '%';
+
+    convertTime(Math.round(song.currentTime));  // Converts decimal numbers to integers
+});
 */
 /* --- BASE --- */
 /* ------------------------------------------- */
@@ -506,209 +794,14 @@ body {
     .feature-box {
       padding: 2rem; } }
 
-/* ------------------------------------------- */
-/* MUSIC PREVIEW
-/* ------------------------------------------- */
-/*
-.section-mp {
-
-    // CSS Grid
-    display: grid;
-    grid-template-rows: repeat(6, 8vw);
-    grid-template-columns: repeat(12, 1fr);
-
-    position: relative;
-}
-
-// THIS IS THE BACKGROUND
-.previewer-bk {
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    overflow: hidden;
-
-    &__black-layer {
-        height: 100vh;
-        width: 100%;
-        background-color: $color-black;
-        position: absolute;
-        z-index: 1;
-    }
-
-    &__img {
-        height: 120vh;
-        width: 105%;
-        -webkit-filter: blur(.6rem);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 99;
-    }
-}
-
-
-// Previewer 1 ------
-.previewer {
-    background-color: $color-black;
-    border-radius: 1.5rem;
-    z-index: 999;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding-bottom: 6rem;
-    box-shadow: 0 1rem 2rem rgba($color-black, .80);
-
-    // CSS Grid Setup
-    grid-row: 2 / 5;
-    grid-column: 3 / 5;
-    
-    // * --- MEDIA QUERIES --- * \\
-    @media only screen and (max-width: $bp-desktop) {
-        grid-row: 2 / 6;
-        grid-column: 3 / 5;
-    }
-    
-}
-
-.image {
-
-    &__img {
-        height: 18rem;
-        width: 100%;
-        margin-top: -.5rem;
-        border-top-left-radius: 1.5rem;
-        border-top-right-radius: 1.5rem;
-    }
-}
-
-.player {
-    padding: 2.5rem;
-    color: #333;
-    position: relative;
-
-    &__song-title {
-        font-family: 'Josefin Sans';
-        font-size: 1.8rem;
-        text-align: center;
-        color: $color-white;
-    }
-}
-
-
-.buttons {
-    height: 5rem;
-    width: 100%;
-    margin-top: 5rem;
-    position: relative;
-    top: 20%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    font-size: 3rem;
-    color: $color-white;
-
-    &__prev {
-        position: absolute;
-        left: -10%;
-    }
-    
-    &__play {
-        border: 0;
-        color: $color-white;
-        border-radius: 50%;
-        outline: none;
-        position: absolute;
-        top: 1%;
-        left: 20%;
-        fill: $color-white;
-    }
-
-    &__next {
-        position: absolute;
-        left: 45%;
-    }
-}
-
-.seek-bar {
-    width: 16rem;
-    height: .5rem;
-    background-color: $color-white;
-    display: flex;
-    border-radius: 5rem;
-    margin-left: 2.5rem;
-    cursor: pointer;
-
-    // * --- MEDIA QUERIES --- * \\
-    @media only screen and (max-width: $bp-desktop) {
-        width: 13rem;
-    }
-}
-
-.fill {
-    height: .5rem;
-    width: 1rem;
-    background-color: $color-primary;
-    border-radius: 2rem;
-}
-
-.handle {
-    width: .8rem;
-    height: .8rem;
-    background-color: $color-primary;
-    border-radius: 50%;
-    margin-left: -.5rem;
-    transform: scale(2.1);
-}
-
-.current-time {
-    color: $color-white;
-    font-family: 'Josefin Sans';
-    position: absolute;
-    top: 110%;
-    left: 35%;
-}
-
-// Previewer 2 ------
-.previewer-2 {
-    background-color: $color-black;
-    border-radius: 1.5rem;
-    z-index: 999;
-
-    // CSS Grid Setup
-    grid-row: 2 / 5;
-    grid-column: 6 / 8;
-
-    // * --- MEDIA QUERIES --- * \\
-    @media only screen and (max-width: $bp-desktop) {
-        grid-row: 2 / 6;
-        grid-column: 6 / 8;
-    }
-}
-
-// Previewer 3 ------
-.previewer-3 {
-    background-color: $color-black;
-    border-radius: 1.5rem;
-    z-index: 999;
-
-    // CSS Grid Setup
-    grid-row: 2 / 5;
-    grid-column: 9 / 11;
-
-    // * --- MEDIA QUERIES --- * \\
-    @media only screen and (max-width: $bp-desktop) {
-        grid-row: 2 / 6;
-        grid-column: 9 / 11;
-    }
-}
-*/
 .container-1 {
   position: relative;
-  overflow: hidden;
-  width: 100%; }
+  width: 100%;
+  height: 100vh; }
 
+/* ---------------------------------------------------------------------------------------------------------------------------------------------- */
+/* SLIDE 1
+/* ---------------------------------------------------------------------------------------------------------------------------------------------- */
 .content-ap-1 {
   grid-row: 1 / 8;
   grid-column: 1 / 12;
@@ -860,7 +953,7 @@ body {
   grid-template-columns: repeat(12, 1fr); }
 
 .buy-album-tab {
-  background-color: rgba(198, 153, 99, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 8;
   grid-row: 5 / 9;
   grid-column: 9 / 12;
@@ -884,6 +977,177 @@ body {
     grid-column: 4 / 7;
     justify-self: center; }
   .buy-album-tab__button {
+    margin-left: 4rem;
+    grid-row: 7 / 8;
+    grid-column: 4 / 5;
+    align-self: center;
+    justify-self: center; }
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------- */
+/* SLIDE 2
+/* ---------------------------------------------------------------------------------------------------------------------------------------------- */
+.content-ap-4 {
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-rows: repeat(8, 8vw);
+  grid-template-columns: repeat(12, 1fr);
+  background-image: url(../images/bk-4-bw.png);
+  background-position: center;
+  background-size: cover; }
+  .content-ap-4__icon-right {
+    color: #fff;
+    font-size: 6rem;
+    cursor: pointer;
+    grid-row: 4 / 5;
+    grid-column: 12 / 13;
+    align-self: center;
+    justify-self: center; }
+  .content-ap-4__icon-left {
+    color: #fff;
+    font-size: 6rem;
+    cursor: pointer;
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+    align-self: center;
+    justify-self: center; }
+
+.music-preview-tab-2 {
+  background-color: rgba(0, 0, 0, 0.9);
+  border: #c69963 solid 0.1rem;
+  grid-row: 3 / 7;
+  grid-column: 2 / 5;
+  display: grid;
+  grid-template-rows: repeat(26, 1fr);
+  grid-template-columns: repeat(16, 1fr); }
+  @media only screen and (max-width: 86.875em) {
+    .music-preview-tab-2 {
+      grid-row: 3 / 8; } }
+  .music-preview-tab-2__image {
+    grid-row: 5 / 6;
+    grid-column: 1 / -1;
+    justify-self: center; }
+  .music-preview-tab-2__button {
+    text-align: center;
+    letter-spacing: .1rem;
+    grid-row: 21 / 22;
+    grid-column: 1 / -1;
+    justify-self: center; }
+  .music-preview-tab-2__el-1 {
+    padding-left: 5.5rem;
+    transition: all .2s;
+    grid-row: 9 / 10;
+    grid-column: 2 / 16; }
+    .music-preview-tab-2__el-1:hover {
+      transform: scale(1.1); }
+  .music-preview-tab-2__el-2 {
+    padding-left: 5.5rem;
+    transition: all .2s;
+    grid-row: 12 / 13;
+    grid-column: 2 / 16; }
+    .music-preview-tab-2__el-2:hover {
+      transform: scale(1.1); }
+  .music-preview-tab-2__el-3 {
+    padding-left: 5.5rem;
+    transition: all .2s;
+    grid-row: 15 / 16;
+    grid-column: 2 / 16; }
+    .music-preview-tab-2__el-3:hover {
+      transform: scale(1.1); }
+
+.music-tab-4 {
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(178, 132, 81, 0.6); }
+  .music-tab-4__icon {
+    position: absolute;
+    top: 2%;
+    left: 6%;
+    font-size: 2.6rem;
+    cursor: pointer; }
+
+.music-tab-5 {
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(153, 153, 153, 0.1); }
+  .music-tab-5__icon {
+    position: absolute;
+    top: 2%;
+    left: 6%;
+    font-size: 2.6rem;
+    cursor: pointer; }
+
+.music-tab-6 {
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(153, 153, 153, 0.1); }
+  .music-tab-6__icon {
+    position: absolute;
+    top: 2%;
+    left: 6%;
+    font-size: 2.6rem;
+    cursor: pointer; }
+
+.content-ap-5 {
+  grid-row: 1 / 8;
+  grid-column: 1 / 12;
+  display: grid;
+  grid-template-rows: repeat(8, 8vw);
+  grid-template-columns: repeat(12, 1fr); }
+
+.about-album-tab-2 {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 1rem 2rem 0 2rem;
+  z-index: 10;
+  grid-row: 3 / 7;
+  grid-column: 5 / 10; }
+  @media only screen and (max-width: 86.875em) {
+    .about-album-tab-2 {
+      grid-row: 3 / 8; } }
+  .about-album-tab-2__heading {
+    font-size: 3rem; }
+    @media only screen and (max-width: 86.875em) {
+      .about-album-tab-2__heading {
+        font-size: 2.5rem; } }
+  .about-album-tab-2__paragraph {
+    font-size: 2rem; }
+    @media only screen and (max-width: 86.875em) {
+      .about-album-tab-2__paragraph {
+        font-size: 1.9rem; } }
+
+.content-ap-6 {
+  grid-row: 1 / 8;
+  grid-column: 1 / 12;
+  display: grid;
+  grid-template-rows: repeat(12, 5vw);
+  grid-template-columns: repeat(12, 1fr); }
+
+.buy-album-tab-2 {
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 8;
+  grid-row: 5 / 9;
+  grid-column: 9 / 12;
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(6, 1fr); }
+  .buy-album-tab-2__heading {
+    color: #fff;
+    font-size: 3.5rem;
+    text-align: center;
+    grid-row: 2 / 3;
+    grid-column: 3 / 7;
+    align-self: flex-end;
+    justify-self: center; }
+  .buy-album-tab-2__icon-1 {
+    grid-row: 3 / 6;
+    grid-column: 3 / 5;
+    justify-self: center; }
+  .buy-album-tab-2__icon-2 {
+    grid-row: 3 / 6;
+    grid-column: 4 / 7;
+    justify-self: center; }
+  .buy-album-tab-2__button {
     margin-left: 4rem;
     grid-row: 7 / 8;
     grid-column: 4 / 5;
@@ -982,7 +1246,25 @@ body {
 /* ------------------------------------------- */
 /* SLIDER | ALBUM PREVIEW | AP
 /* ------------------------------------------- */
+.slider-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 100%;
+  float: left; }
+
+.slide-two {
+  width: 33.33333333333333%;
+  height: 100%;
+  float: left; }
+
 .slide-ap-1 {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(8, 1fr); }
+
+.slide-ap-2 {
   display: grid;
   grid-template-rows: repeat(1, 1fr);
   grid-template-columns: repeat(8, 1fr); }
