@@ -54,134 +54,22 @@
 }
 
 .music-preview-tab {
-
-    background-color: rgba($color-black, .90);
-    border: $color-primary solid .1rem;
-
-    // CSS Grid
-    grid-row: 3 / 7;
-    grid-column: 2 / 5;
-
-    display: grid;
-    grid-template-rows: repeat(26, 1fr);
-    grid-template-columns: repeat(16, 1fr);
-
-    // * --- MEDIA QUERIES --- * \\
-    @media only screen and (max-width: $bp-desktop) {
-
-        // CSS Grid
-        grid-row: 3 / 8;
-    }
-
-    &__image {
-
-        // CSS Grid
-        grid-row: 5 / 6;
-        grid-column: 1 / -1;
-        justify-self: center;
-    }
-
-    &__button {
-
-        text-align: center;
-        letter-spacing: .1rem;
-
-        // CSS Grid 
-        grid-row: 21 / 22;
-        grid-column: 1 / -1;
-        justify-self: center;
-    }
-
-    &__el-1 {
-
-        padding-left: 5.5rem;
-        transition: all .2s;
-
-        // CSS Grid
-        grid-row: 9 / 10;
-        grid-column: 2 / 16;
-
-        &:hover {
-            transform: scale(1.1);
-        }
-    }
-
-
-    &__el-2 {
-
-        padding-left: 5.5rem;
-        transition: all .2s;
-
-        // CSS Grid
-        grid-row: 12 / 13;
-        grid-column: 2 / 16;
-
-        &:hover {
-            transform: scale(1.1);
-        }
-    }
-
-    &__el-3 {
-
-        padding-left: 5.5rem;
-        transition: all .2s;
-
-        // CSS Grid
-        grid-row: 15 / 16;
-        grid-column: 2 / 16;
-
-        &:hover {
-            transform: scale(1.1);
-        }
-    }
+    @include musicPreviewTab;
 }
 
 .music-tab-1 {
-
-    position: relative;
-    color: rgba($color-white, .80);
-    //background-color: rgba($color-grey-dark-2, .10);
-    background-color: $color-el;
-
-    &__icon {
-        position: absolute;
-        top: 2%;
-        left: 6%;
-        font-size: 2.6rem;
-        cursor: pointer;
-    }
+    @include musicTab-1;
 }
 
 .music-tab-2 {
-
-    position: relative;
-    color: rgba($color-white, .80);
-    background-color: rgba($color-grey-dark-2, .10);
-
-    &__icon {
-        position: absolute;
-        top: 2%;
-        left: 6%;
-        font-size: 2.6rem;
-        cursor: pointer;
-    }
+    @include musicTab-2;
 }
 
 .music-tab-3 {
-
-    position: relative;
-    color: rgba($color-white, .80);
-    background-color: rgba($color-grey-dark-2, .10);
-
-    &__icon {
-        position: absolute;
-        top: 2%;
-        left: 6%;
-        font-size: 2.6rem;
-        cursor: pointer;
-    }
+    @include musicTab-3;
 }
 
+// Music Title | Name
 .mt-name {
     font-size: 1.7rem;
 
@@ -193,7 +81,6 @@
 
 // Content Album Previw 2 | ABOUT ----------------------------------------------------------------------------------
 .content-ap-2 {
-
     // CSS Grid
     grid-row: 1 / 8;
     grid-column: 1 / 12;
@@ -205,51 +92,7 @@
 
 // About Album Tab 
 .about-album-tab {
-
-    color: rgba($color-white, .80);
-    background-color: rgba($color-black, .90);
-    padding: 1rem 2rem 0 2rem;
-    z-index: 10;
-
-    // CSS Grid
-    grid-row: 3 / 7;
-    grid-column: 5 / 10;
-
-    // * --- MEDIA QUERIES --- * \\
-    @media only screen and (max-width: $bp-desktop) {
-        grid-row: 3 / 8;
-    }
-
-    &__heading {
-        font-size: 3rem;
-
-        // * --- MEDIA QUERIES --- * \\
-        @media only screen and (max-width: $bp-desktop) {
-            font-size: 2.5rem;
-        }
-    }
-
-    &__paragraph {
-        font-size: 2rem;
-
-        // * --- MEDIA QUERIES --- * \\
-        @media only screen and (max-width: $bp-desktop) {
-            font-size: 1.9rem;
-        }
-    }
-}
-
-// Spotify Link
-.special-s {
-
-    //color: #1db954;
-    color: $color-primary;
-    text-decoration: none;
-    transition: all .2s;
-
-    &:hover {
-        transform: scale(2);
-    }
+    @include albumAboutTab;
 }
 
 // Content Album Preview 3 | Buy Album -----------------------------------------------------------------------------------
@@ -265,56 +108,7 @@
 }
 
 .buy-album-tab {
-
-    background-color: rgba($color-black, .80);
-    z-index: 8;
-
-    // CSS Grid
-    grid-row: 5 / 9;
-    grid-column: 9 / 12;
-    display: grid;
-    grid-template-rows: repeat(8, 1fr);
-    grid-template-columns: repeat(6, 1fr);
-
-
-    &__heading {
-        color: $color-white;
-        font-size: 3.5rem;
-        text-align: center;
-
-        // CSS Grid
-        grid-row: 2 / 3;
-        grid-column: 3 / 7;
-        align-self: flex-end;
-        justify-self: center;
-    }
-
-    // Android Icon
-    &__icon-1 {
-        // CSS Grid
-        grid-row: 3 / 6;
-        grid-column: 3 / 5;
-        justify-self: center;
-    }
-
-    // Apple Icon
-    &__icon-2 {
-        // CSS Grid
-        grid-row: 3 / 6;
-        grid-column: 4 / 7;
-        justify-self: center;  
-    }
-
-    &__button {
-
-        margin-left: 4rem;
-
-        // CSS Grid
-        grid-row: 7 / 8;
-        grid-column: 4 / 5;
-        align-self: center;
-        justify-self: center;  
-    }
+    @include albumBuyTab;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -391,38 +185,7 @@
 
 // About Album Tab 
 .about-album-tab-2 {
-
-    color: rgba($color-white, .80);
-    background-color: rgba($color-black, .90);
-    padding: 1rem 2rem 0 2rem;
-    z-index: 10;
-
-    // CSS Grid
-    grid-row: 3 / 7;
-    grid-column: 5 / 10;
-
-    // * --- MEDIA QUERIES --- * \\
-    @media only screen and (max-width: $bp-desktop) {
-        grid-row: 3 / 8;
-    }
-
-    &__heading {
-        font-size: 3rem;
-
-        // * --- MEDIA QUERIES --- * \\
-        @media only screen and (max-width: $bp-desktop) {
-            font-size: 2.5rem;
-        }
-    }
-
-    &__paragraph {
-        font-size: 2rem;
-
-        // * --- MEDIA QUERIES --- * \\
-        @media only screen and (max-width: $bp-desktop) {
-            font-size: 1.9rem;
-        }
-    }
+    @include albumAboutTab;
 }
 
 // Content Album Preview 3 | Buy Album -----------------------------------------------------------------------------------
@@ -438,56 +201,7 @@
 }
 
 .buy-album-tab-2 {
-
-    background-color: rgba($color-black, .80);
-    z-index: 8;
-
-    // CSS Grid
-    grid-row: 5 / 9;
-    grid-column: 9 / 12;
-    display: grid;
-    grid-template-rows: repeat(8, 1fr);
-    grid-template-columns: repeat(6, 1fr);
-
-
-    &__heading {
-        color: $color-white;
-        font-size: 3.5rem;
-        text-align: center;
-
-        // CSS Grid
-        grid-row: 2 / 3;
-        grid-column: 3 / 7;
-        align-self: flex-end;
-        justify-self: center;
-    }
-
-    // Android Icon
-    &__icon-1 {
-        // CSS Grid
-        grid-row: 3 / 6;
-        grid-column: 3 / 5;
-        justify-self: center;
-    }
-
-    // Apple Icon
-    &__icon-2 {
-        // CSS Grid
-        grid-row: 3 / 6;
-        grid-column: 4 / 7;
-        justify-self: center;  
-    }
-
-    &__button {
-
-        margin-left: 4rem;
-
-        // CSS Grid
-        grid-row: 7 / 8;
-        grid-column: 4 / 5;
-        align-self: center;
-        justify-self: center;  
-    }
+    @include albumBuyTab;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -563,38 +277,7 @@
 
 // About Album Tab 
 .about-album-tab-3 {
-
-    color: rgba($color-white, .80);
-    background-color: rgba($color-black, .90);
-    padding: 1rem 2rem 0 2rem;
-    z-index: 10;
-
-    // CSS Grid
-    grid-row: 3 / 7;
-    grid-column: 5 / 10;
-
-    // * --- MEDIA QUERIES --- * \\
-    @media only screen and (max-width: $bp-desktop) {
-        grid-row: 3 / 8;
-    }
-
-    &__heading {
-        font-size: 3rem;
-
-        // * --- MEDIA QUERIES --- * \\
-        @media only screen and (max-width: $bp-desktop) {
-            font-size: 2.5rem;
-        }
-    }
-
-    &__paragraph {
-        font-size: 2rem;
-
-        // * --- MEDIA QUERIES --- * \\
-        @media only screen and (max-width: $bp-desktop) {
-            font-size: 1.9rem;
-        }
-    }
+    @include albumAboutTab;
 }
 
 // Content Album Preview 3 | Buy Album -----------------------------------------------------------------------------------
@@ -610,56 +293,7 @@
 }
 
 .buy-album-tab-3 {
-
-    background-color: rgba($color-black, .80);
-    z-index: 8;
-
-    // CSS Grid
-    grid-row: 5 / 9;
-    grid-column: 9 / 12;
-    display: grid;
-    grid-template-rows: repeat(8, 1fr);
-    grid-template-columns: repeat(6, 1fr);
-
-
-    &__heading {
-        color: $color-white;
-        font-size: 3.5rem;
-        text-align: center;
-
-        // CSS Grid
-        grid-row: 2 / 3;
-        grid-column: 3 / 7;
-        align-self: flex-end;
-        justify-self: center;
-    }
-
-    // Android Icon
-    &__icon-1 {
-        // CSS Grid
-        grid-row: 3 / 6;
-        grid-column: 3 / 5;
-        justify-self: center;
-    }
-
-    // Apple Icon
-    &__icon-2 {
-        // CSS Grid
-        grid-row: 3 / 6;
-        grid-column: 4 / 7;
-        justify-self: center;  
-    }
-
-    &__button {
-
-        margin-left: 4rem;
-
-        // CSS Grid
-        grid-row: 7 / 8;
-        grid-column: 4 / 5;
-        align-self: center;
-        justify-self: center;  
-    }
+    @include albumBuyTab;
 }
 
 // Section Album Preview General Minor Stuff -------------------------------------------------------------------------------
@@ -680,4 +314,17 @@
     color: $color-white;
     font-size: 10rem;
     cursor: pointer;
+}
+
+// Spotify Link
+.special-s {
+
+    //color: #1db954;
+    color: $color-primary;
+    text-decoration: none;
+    transition: all .2s;
+
+    &:hover {
+        transform: scale(2);
+    }
 }
