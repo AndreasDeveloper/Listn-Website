@@ -1,4 +1,6 @@
-// EXPERIMENTAL
+/* -------------------------------------- */
+/* MUSIC PREVIEW 2 | JavaScript Setup
+/* -------------------------------------- */
 
 // Creates variables with actual audio and song path of the array
 var currentTime4 = document.getElementById('current-time-4');
