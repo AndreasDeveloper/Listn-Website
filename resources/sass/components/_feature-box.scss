@@ -43,4 +43,12 @@
     @include respond(tab-port) {
         padding: 2rem;
     }
+
+    @media only screen and (max-width: $bp-largest-3) {
+        font-size: 1.3rem;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 1rem;
+    }
 }

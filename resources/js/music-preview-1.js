@@ -10,6 +10,7 @@ var song = new Audio();
 // | FUNCTION | - Plays the song
 function playSong() {
     song.src = 'resources/music-prev/Lucky You.mp3';  // set the source of the first song
+    song.play();
 }
 
 // | FUNCTION | - Play/Pause option for the player

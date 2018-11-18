@@ -206,7 +206,7 @@
 /// Music Preview JS Setup
 /*
 // Creating Array with songs
-var songs1 = ['resources/music-prev/Lucky You.mp3', 'resources/music-prev/Not Alike.mp3', 'resources/music-prev/Venom.mp3'];
+var songs = ['resources/music-prev/Lucky You.mp3', 'resources/music-prev/Not Alike.mp3', 'resources/music-prev/Venom.mp3'];
 
 // Creating Array for poster of each song (same in this case for each song)
 var poster = ['resources/images/kamikaze-bk-2.jpg'];
@@ -224,8 +224,8 @@ var currentSong = 0;    // Points to the current song
 
 // | FUNCTION | - Plays the song
 function playSong() {
-    song.src = songs1[currentSong];  // set the source of the first song
-    //songTitle.textContent = songs1[currentSong]; // Set the title of the song
+    song.src = songs[currentSong];  // set the source of the first song
+    //songTitle.textContent = songs[currentSong]; // Set the title of the song
     song.play(); // Plays the song
 }
 
