@@ -5,17 +5,16 @@
 // Creates variables with actual audio and song path of the array
 var currentTime4 = document.getElementById('current-time-4');
 
-var song4 = new Audio();
+var song4 = new Audio('resources/music-prev/KL - Humble.mp3');
 
 // | FUNCTION | - Plays the song
 function playSong4() {
-    song4.src = 'resources/music-prev/KL - Humble.mp3';  // set the source of the first song
+    song4.play();
 }
 
 // | FUNCTION | - Play/Pause option for the player
 function playNPauseSong4() {
     if (song4.paused) {
-        playSong4();
         song4.play();
         $('#playI-4 i').attr('class', 'icon ion-md-pause music-tab-4__icon');
     } else {
@@ -31,7 +30,7 @@ function convertTime4(seconds) {
 
     min = (min < 10 ) ? '0' + min : min;
     sec = (sec < 10) ? '0' + sec : sec;
-    currentTime.textContent = min + ':' + sec;
+    currentTime4.textContent = min + ':' + sec;
 
     totalTime4(Math.round(song4.duration));
 }
@@ -43,25 +42,24 @@ function totalTime4(seconds) {
 
     min = (min < 10 ) ? '0' + min : min;
     sec = (sec < 10) ? '0' + sec : sec;
-    currentTime.textContent += ' / ' + min + ':' + sec;
+    currentTime4.textContent += ' / ' + min + ':' + sec;
 }
 
 // | EVENT LISTENER | Track Bar Setup
 song4.addEventListener('timeupdate', function() {
-    var position = song4.currentTime / song4.duration;
+    var position = song4.currentTime4 / song4.duration;
 
-    convertTime4(Math.round(song4.currentTime));  // Converts decimal numbers to integers
+    convertTime4(Math.round(song4.currentTime4));  // Converts decimal numbers to integers
 });
 
 // SONG 2 SETUP ----------------------------------------------------------------
 var currentTime5 = document.getElementById('current-time-5');
 
 // Creates variables with actual audio and song path of the array
-var song5 = new Audio();
+var song5 = new Audio('resources/music-prev/KL - Element.mp3');
 
 // | FUNCTION | - Plays the song
 function playSong5() {
-    song5.src = 'resources/music-prev/KL - Element.mp3';  // set the source of the first song
     song5.play();
 }
 
@@ -110,11 +108,10 @@ song5.addEventListener('timeupdate', function() {
 var currentTime6 = document.getElementById('current-time-6');
 
 // Creates variables with actual audio and song path of the array
-var song6 = new Audio();
+var song6 = new Audio('resources/music-prev/KL - DNA.mp3');
 
 // | FUNCTION | - Plays the song
 function playSong6() {
-    song6.src = 'resources/music-prev/KL - DNA.mp3';  // set the source of the first song
     song6.play();
 }
 

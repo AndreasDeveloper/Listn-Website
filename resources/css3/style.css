@@ -1820,11 +1820,14 @@ body {
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(6, 1fr); }
   .left-side__heading {
-    height: 30rem;
+    max-height: 30rem;
     grid-row: 2 / 6;
     grid-column: 1 / 6;
     justify-self: center;
     align-self: center; }
+    @media only screen and (max-width: 62.5em) {
+      .left-side__heading {
+        max-height: 25rem; } }
 
 .right-side {
   background-color: #1f1f1f;

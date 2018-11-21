@@ -115,13 +115,18 @@
 
     &__heading {
 
-        height: 30rem;
+        max-height: 30rem;
 
         // CSS Grid
         grid-row: 2 / 6;
         grid-column: 1 / 6;
         justify-self: center;
         align-self: center;
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-large) {
+            max-height: 25rem;
+        }
     }
 }
 

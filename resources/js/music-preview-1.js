@@ -5,18 +5,16 @@
 // Creates variables with actual audio and song path of the array
 var currentTime = document.getElementById('current-time');
 
-var song = new Audio();
+var song = new Audio('resources/music-prev/Lucky You.mp3');  // set the source of the first song
 
 // | FUNCTION | - Plays the song
 function playSong() {
-    song.src = 'resources/music-prev/Lucky You.mp3';  // set the source of the first song
     song.play();
 }
 
 // | FUNCTION | - Play/Pause option for the player
 function playNPauseSong() {
     if (song.paused) {
-        playSong();
         song.play();
         $('#playI i').attr('class', 'icon ion-md-pause music-tab-1__icon');
     } else {
@@ -54,22 +52,20 @@ song.addEventListener('timeupdate', function() {
     convertTime(Math.round(song.currentTime));  // Converts decimal numbers to integers
 });
 
-// SONG 2 SETUP ----------------------------------------------------------------
+// SONG 2 SETUP -----------------------------------------------------------------------------------------------------------------
 var currentTime2 = document.getElementById('current-time-2');
 
 // Creates variables with actual audio and song path of the array
-var song2 = new Audio();
+var song2 = new Audio('resources/music-prev/Not Alike.mp3'); // set the source of the first song
 
 // | FUNCTION | - Plays the song
 function playSong2() {
-    song2.src = 'resources/music-prev/Not Alike.mp3';  // set the source of the first song
     song2.play();
 }
 
 // | FUNCTION | - Play/Pause option for the player
 function playNPauseSong2() {
     if (song2.paused) {
-        playSong2();
         song2.play();
         $('#playI-2 i').attr('class', 'icon ion-md-pause music-tab-2__icon');
     } else {
@@ -111,18 +107,16 @@ song2.addEventListener('timeupdate', function() {
 var currentTime3 = document.getElementById('current-time-3');
 
 // Creates variables with actual audio and song path of the array
-var song3 = new Audio();
+var song3 = new Audio('resources/music-prev/Venom.mp3');
 
 // | FUNCTION | - Plays the song
 function playSong3() {
-    song3.src = 'resources/music-prev/Venom.mp3';  // set the source of the first song
     song3.play();
 }
 
 // | FUNCTION | - Play/Pause option for the player
 function playNPauseSong3() {
     if (song3.paused) {
-        playSong3();
         song3.play();
         $('#playI-3 i').attr('class', 'icon ion-md-pause music-tab-3__icon');
     } else {
