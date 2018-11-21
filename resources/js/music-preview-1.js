@@ -7,11 +7,6 @@ var currentTime = document.getElementById('current-time');
 
 var song = new Audio('resources/music-prev/Lucky You.mp3');  // set the source of the first song
 
-// | FUNCTION | - Plays the song
-function playSong() {
-    song.play();
-}
-
 // | FUNCTION | - Play/Pause option for the player
 function playNPauseSong() {
     if (song.paused) {
@@ -58,11 +53,6 @@ var currentTime2 = document.getElementById('current-time-2');
 // Creates variables with actual audio and song path of the array
 var song2 = new Audio('resources/music-prev/Not Alike.mp3'); // set the source of the first song
 
-// | FUNCTION | - Plays the song
-function playSong2() {
-    song2.play();
-}
-
 // | FUNCTION | - Play/Pause option for the player
 function playNPauseSong2() {
     if (song2.paused) {
@@ -98,9 +88,9 @@ function totalTime2(seconds) {
 
 // | EVENT LISTENER | Track Bar Setup
 song2.addEventListener('timeupdate', function() {
-    var position = song2.currentTime2 / song2.duration;
+    var position = song2.currentTime / song2.duration;
 
-    convertTime2(Math.round(song2.currentTime2));  // Converts decimal numbers to integers
+    convertTime2(Math.round(song2.currentTime));  // Converts decimal numbers to integers
 });
 
 // SONG 3 SETUP ----------------------------------------------------------------
@@ -108,11 +98,6 @@ var currentTime3 = document.getElementById('current-time-3');
 
 // Creates variables with actual audio and song path of the array
 var song3 = new Audio('resources/music-prev/Venom.mp3');
-
-// | FUNCTION | - Plays the song
-function playSong3() {
-    song3.play();
-}
 
 // | FUNCTION | - Play/Pause option for the player
 function playNPauseSong3() {
@@ -149,7 +134,7 @@ function totalTime3(seconds) {
 
 // | EVENT LISTENER | Track Bar Setup
 song3.addEventListener('timeupdate', function() {
-    var position = song3.currentTime3 / song3.duration;
+    var position = song3.currentTime / song3.duration;
 
-    convertTime3(Math.round(song3.currentTime3));  // Converts decimal numbers to integers
+    convertTime3(Math.round(song3.currentTime));  // Converts decimal numbers to integers
 });

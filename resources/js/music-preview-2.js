@@ -7,11 +7,6 @@ var currentTime4 = document.getElementById('current-time-4');
 
 var song4 = new Audio('resources/music-prev/KL - Humble.mp3');
 
-// | FUNCTION | - Plays the song
-function playSong4() {
-    song4.play();
-}
-
 // | FUNCTION | - Play/Pause option for the player
 function playNPauseSong4() {
     if (song4.paused) {
@@ -47,9 +42,9 @@ function totalTime4(seconds) {
 
 // | EVENT LISTENER | Track Bar Setup
 song4.addEventListener('timeupdate', function() {
-    var position = song4.currentTime4 / song4.duration;
+    var position = song4.currentTime / song4.duration;
 
-    convertTime4(Math.round(song4.currentTime4));  // Converts decimal numbers to integers
+    convertTime4(Math.round(song4.currentTime));  // Converts decimal numbers to integers
 });
 
 // SONG 2 SETUP ----------------------------------------------------------------
@@ -58,15 +53,9 @@ var currentTime5 = document.getElementById('current-time-5');
 // Creates variables with actual audio and song path of the array
 var song5 = new Audio('resources/music-prev/KL - Element.mp3');
 
-// | FUNCTION | - Plays the song
-function playSong5() {
-    song5.play();
-}
-
 // | FUNCTION | - Play/Pause option for the player
 function playNPauseSong5() {
     if (song5.paused) {
-        playSong5();
         song5.play();
         $('#playI-5 i').attr('class', 'icon ion-md-pause music-tab-5__icon');
     } else {
@@ -82,7 +71,7 @@ function convertTime5(seconds) {
 
     min = (min < 10 ) ? '0' + min : min;
     sec = (sec < 10) ? '0' + sec : sec;
-    currentTime2.textContent = min + ':' + sec;
+    currentTime5.textContent = min + ':' + sec;
 
     totalTime5(Math.round(song5.duration));
 }
@@ -94,14 +83,14 @@ function totalTime5(seconds) {
 
     min = (min < 10 ) ? '0' + min : min;
     sec = (sec < 10) ? '0' + sec : sec;
-    currentTime2.textContent += ' / ' + min + ':' + sec;
+    currentTime5.textContent += ' / ' + min + ':' + sec;
 }
 
 // | EVENT LISTENER | Track Bar Setup
 song5.addEventListener('timeupdate', function() {
-    var position = song5.currentTime2 / song5.duration;
+    var position = song5.currentTime / song5.duration;
 
-    convertTime5(Math.round(song5.currentTime5));  // Converts decimal numbers to integers
+    convertTime5(Math.round(song5.currentTime));  // Converts decimal numbers to integers
 });
 
 // SONG 3 SETUP ----------------------------------------------------------------
@@ -110,15 +99,9 @@ var currentTime6 = document.getElementById('current-time-6');
 // Creates variables with actual audio and song path of the array
 var song6 = new Audio('resources/music-prev/KL - DNA.mp3');
 
-// | FUNCTION | - Plays the song
-function playSong6() {
-    song6.play();
-}
-
 // | FUNCTION | - Play/Pause option for the player
 function playNPauseSong6() {
     if (song6.paused) {
-        playSong6();
         song6.play();
         $('#playI-6 i').attr('class', 'icon ion-md-pause music-tab-6__icon');
     } else {
@@ -151,7 +134,7 @@ function totalTime6(seconds) {
 
 // | EVENT LISTENER | Track Bar Setup
 song6.addEventListener('timeupdate', function() {
-    var position = song6.currentTime6 / song.duration;
+    var position = song6.currentTime / song6.duration;
 
-    convertTime6(Math.round(song6.currentTime6));  // Converts decimal numbers to integers
+    convertTime6(Math.round(song6.currentTime));  // Converts decimal numbers to integers
 });
