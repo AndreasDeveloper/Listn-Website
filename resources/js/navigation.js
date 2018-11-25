@@ -15,7 +15,7 @@ $(document).ready(function() {
     $("#close").click(function() {
         $("#mainMenu").css("-webkit-clip-path","polygon(0 0,0% 0,100% 100%,0% 100%)");
         function hideMenu() {
-            $("#mainMenu").css("left", "-400px");
+            $("#mainMenu").css("left", "-500px");
             $("#menuIcon").animate({right: '50'}, 300);
         }
         setTimeout(hideMenu, 300);
