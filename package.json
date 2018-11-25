@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AndreasDeveloper/Tech-Hub"
+    "url": "git+https://github.com/AndreasDeveloper/Listn-Website"
   },
   "author": "AndreasDEV",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AndreasDeveloper/Tech-Hub/issues"
+    "url": "https://github.com/AndreasDeveloper/Listn-Website/issues"
   },
-  "homepage": "https://github.com/AndreasDeveloper/Tech-Hub/blob/master/README.md",
+  "homepage": "https://github.com/AndreasDeveloper/Listn-Website",
   "devDependencies": {
     "autoprefixer": "^9.1.3",
     "autoprefixer-cli": "^1.0.0",
