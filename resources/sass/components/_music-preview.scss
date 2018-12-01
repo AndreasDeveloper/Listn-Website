@@ -310,7 +310,8 @@
 // Album Preview Name
 .ap-name {
 
-    height: 35rem;
+    max-height: 35rem;
+    max-width: 100%;
 
     // CSS Grid 
     grid-row: 1 / 3;
