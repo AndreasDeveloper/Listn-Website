@@ -5,7 +5,7 @@
 // Creates variables with actual audio and song path of the array
 var currentTime4 = document.getElementById('current-time-4');
 
-var song4 = new Audio('resources/music-prev/KL - Humble.mp3');
+var song4 = new Audio('../resources/music-prev/KL - Humble.mp3');
 
 // | FUNCTION | - Play/Pause option for the player
 function playNPauseSong4() {
@@ -51,7 +51,7 @@ song4.addEventListener('timeupdate', function() {
 var currentTime5 = document.getElementById('current-time-5');
 
 // Creates variables with actual audio and song path of the array
-var song5 = new Audio('resources/music-prev/KL - Element.mp3');
+var song5 = new Audio('../resources/music-prev/KL - Element.mp3');
 
 // | FUNCTION | - Play/Pause option for the player
 function playNPauseSong5() {
@@ -97,7 +97,7 @@ song5.addEventListener('timeupdate', function() {
 var currentTime6 = document.getElementById('current-time-6');
 
 // Creates variables with actual audio and song path of the array
-var song6 = new Audio('resources/music-prev/KL - DNA.mp3');
+var song6 = new Audio('../resources/music-prev/KL - DNA.mp3');
 
 // | FUNCTION | - Play/Pause option for the player
 function playNPauseSong6() {

@@ -290,12 +290,12 @@
     grid-template-rows: repeat(20, 1fr);
     grid-template-columns: repeat(20, 5vw);
 
-    // Tab 1
+    // Tab 1 - Text
     &__tab-1 {
         @include textTab;
     }
 
-    // Tab 2
+    // Tab 2 - Buttons
     &__tab-2 {
         @include buttonTab;
     }

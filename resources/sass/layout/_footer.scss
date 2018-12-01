@@ -113,6 +113,9 @@
     &__icon {
         // CSS Grid - Overall Container
         grid-row: 3 / 4;
+        cursor: pointer;
+        text-decoration: none;
+        color: $color-white;
 
         &--1,
         &--2,

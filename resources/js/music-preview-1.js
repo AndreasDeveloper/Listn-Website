@@ -5,7 +5,7 @@
 // Creates variables with actual audio and song path of the array
 var currentTime = document.getElementById('current-time');
 
-var song = new Audio('resources/music-prev/Lucky You.mp3');  // set the source of the first song
+var song = new Audio('../resources/music-prev/Lucky You.mp3');  // set the source of the first song
 
 // | FUNCTION | - Play/Pause option for the player
 function playNPauseSong() {
@@ -51,7 +51,7 @@ song.addEventListener('timeupdate', function() {
 var currentTime2 = document.getElementById('current-time-2');
 
 // Creates variables with actual audio and song path of the array
-var song2 = new Audio('resources/music-prev/Not Alike.mp3'); // set the source of the first song
+var song2 = new Audio('../resources/music-prev/Not Alike.mp3'); // set the source of the first song
 
 // | FUNCTION | - Play/Pause option for the player
 function playNPauseSong2() {
@@ -97,7 +97,7 @@ song2.addEventListener('timeupdate', function() {
 var currentTime3 = document.getElementById('current-time-3');
 
 // Creates variables with actual audio and song path of the array
-var song3 = new Audio('resources/music-prev/Venom.mp3');
+var song3 = new Audio('../resources/music-prev/Venom.mp3');
 
 // | FUNCTION | - Play/Pause option for the player
 function playNPauseSong3() {
