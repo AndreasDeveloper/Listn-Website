@@ -1,5 +1,5 @@
 /* ------------------------------------------- */
-/* BUTTONS
+/* BUTTONS | HEADER 1
 /* ------------------------------------------- */
 
 // Button 1 Style
@@ -51,7 +51,6 @@
 }
 
 // Button 2 Style
-
 .btn-2 {
     position: relative;
     display: inline-block;
@@ -98,6 +97,53 @@
 .btn-full-2:hover::before {
    height: 450%;
 }
+
+/* ------------------------------------------- */
+/* BUTTON HEADER | 2
+/* ------------------------------------------- */
+
+// Style 1
+.button-1 {
+    border: .1rem solid $color-primary-light;
+    background: none;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 0%;
+        background: $color-primary-light;
+        z-index: -1;
+        transition: 0.8s;
+    }
+}
+
+.but-1 {
+    color: $color-primary-light;
+
+    &:hover {
+        color: $color-white;
+    }
+
+    &::before {
+        bottom: 0;
+        border-radius: 50% 50% 0 0;
+    }
+
+    &:hover::before {
+        height: 180%;
+    }
+}
+
 
 /* ------------------------------------------- */
 /* BUTTON TEXT | ABOUT US
