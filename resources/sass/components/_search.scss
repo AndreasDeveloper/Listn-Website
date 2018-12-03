@@ -1,0 +1,70 @@
+/* ------------------------------------------- */
+/* NAVIGATION SEARCH
+/* ------------------------------------------- */
+
+/* --- SEARCH BOX --- */
+.search {
+    flex: 0 0 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 90%;
+    position: absolute;
+    top: 15%;
+
+    // --- MEDIA QUERIES --- \\
+    @media only screen and(max-width: $bp-vsmall-1) {
+        order: 1;
+        flex: 0 0 100%;
+        background-color: $color-grey-light-1;
+    }
+
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: $color-grey-light-1;
+        border: none;
+        padding: 1.5rem 2rem;
+        border-radius: 10rem;
+        width: 90%;
+        transition: all .2s;
+        margin-right: -3.25rem;
+
+        &:focus {
+            outline: none;
+            width: 100%;        // WHEN ELEMENT IS FOCUSED (CLICKED) IT WILL EXTENED. 
+            background-color: $color-grey-light-2;
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: $color-grey-light-3;
+        }
+    }
+
+    &__input:focus + &__button {
+        background-color: $color-grey-light-2;
+    }
+
+    &__button {
+        border: none;
+        background-color: $color-grey-light-1;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            transform: translateY(.2rem);
+        }
+    }
+
+    &__icon {
+        font-size: 1.5rem;
+        fill: $color-grey-dark-1;
+        color: $color-primary;
+    }
+}

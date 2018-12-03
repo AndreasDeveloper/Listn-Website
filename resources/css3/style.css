@@ -140,6 +140,24 @@
 /* ------------------------------------------- */
 /* CENTERS THE BUTTONS
 /* ------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* MUSIC PREVIEW PLAYER
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* ABOUT ALBUM TAB
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* BUY ALBUM TAB
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* HEADER | TEXT TAB / BUTTONS
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* CATEGORIES | BACKGROUND IMAGE POSITION
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* GENERIC HEADER | For all sub-pages | Heading-1, heading-2, button
+/* ------------------------------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------- */
 /* MEDIA QUERIES | SHORTCUT VERSION
 /* ------------------------------------------- */
@@ -162,21 +180,6 @@
     - tab-land
     - big-desktop
 */
-/* ------------------------------------------------------------------------------------------------------------------------ */
-/* MUSIC PREVIEW PLAYER
-/* ------------------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------------------ */
-/* ABOUT ALBUM TAB
-/* ------------------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------------------ */
-/* BUY ALBUM TAB
-/* ------------------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------------------ */
-/* HEADER | TEXT TAB / BUTTONS
-/* ------------------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------------------ */
-/* CATEGORIES | BACKGROUND IMAGE POSITION
-/* ------------------------------------------------------------------------------------------------------------------------ */
 /*
 .section-mp {
 
@@ -1482,6 +1485,55 @@ body {
     animation: bounceShadow .75s infinite linear; }
 
 /* ------------------------------------------- */
+/* NAVIGATION SEARCH
+/* ------------------------------------------- */
+/* --- SEARCH BOX --- */
+.search {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  position: absolute;
+  top: 15%; }
+  @media only screen and (max-width: 31.25em) {
+    .search {
+      order: 1;
+      flex: 0 0 100%;
+      background-color: #f7f7f7; } }
+  .search__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: #f7f7f7;
+    border: none;
+    padding: 1.5rem 2rem;
+    border-radius: 10rem;
+    width: 90%;
+    transition: all .2s;
+    margin-right: -3.25rem; }
+    .search__input:focus {
+      outline: none;
+      width: 100%;
+      background-color: #eee; }
+    .search__input::-webkit-input-placeholder {
+      font-weight: 100;
+      color: #f1f0f0; }
+  .search__input:focus + .search__button {
+    background-color: #eee; }
+  .search__button {
+    border: none;
+    background-color: #f7f7f7; }
+    .search__button:focus {
+      outline: none; }
+    .search__button:active {
+      transform: translateY(0.2rem); }
+  .search__icon {
+    font-size: 1.5rem;
+    fill: #777;
+    color: #c69963; }
+
+/* ------------------------------------------- */
 /* SLIDER | HEADER
 /* ------------------------------------------- */
 .container {
@@ -2225,6 +2277,9 @@ body {
   left: -40rem;
   transition: all .5s ease-in-out;
   z-index: 998; }
+  .main-menu__icon {
+    padding-right: 1rem;
+    color: #c69963; }
   .main-menu__list {
     list-style: none;
     padding: 0;
@@ -2232,14 +2287,15 @@ body {
     font-size: 2.5rem;
     letter-spacing: .2rem;
     color: #fff;
-    text-align: center;
+    text-align: left;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 40%;
     transform: translate(-50%, -50%); }
   .main-menu__tab {
     display: inline-block;
     margin: 1rem;
+    padding-right: 1rem;
     position: relative; }
     .main-menu__tab:hover {
       cursor: pointer; }
@@ -2556,3 +2612,42 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(../images/cat-10.jpeg);
     background-position: center;
     background-size: cover; }
+
+/* ------------------------------------------- */
+/* HEADER | MONTHLY PREVIEW
+/* ------------------------------------------- */
+.prev-header {
+  display: grid;
+  grid-template-rows: repeat(9, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(../images/clean-hd-6.jpeg);
+  background-position: center;
+  background-size: cover; }
+  .prev-header__heading-1 {
+    grid-row: 5 / 9;
+    grid-column: 1 / -1;
+    justify-self: center;
+    align-self: center;
+    font-weight: 600;
+    font-size: 5rem;
+    letter-spacing: 1rem; }
+  .prev-header__heading-2 {
+    grid-row: 6 / 9;
+    grid-column: 1 / -1;
+    justify-self: center;
+    align-self: center;
+    color: #fff;
+    font-weight: 300;
+    font-size: 2rem;
+    letter-spacing: .2rem; }
+  .prev-header__button {
+    grid-row: 7 / 9;
+    grid-column: 1 / -1;
+    justify-self: center;
+    align-self: center;
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    z-index: 1; }
