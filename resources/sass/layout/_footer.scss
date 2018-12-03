@@ -171,9 +171,16 @@
     grid-row: 11 / 12;
     grid-column: 8 / 10;
     justify-self: center;
+    margin-right: 8rem;
 
     &__text {
         font-size: 1.2rem;
         font-weight: 300;
     }
+}
+
+// Default
+.footer a {
+    text-decoration: none;
+    color: inherit;
 }

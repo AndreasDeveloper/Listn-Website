@@ -1,0 +1,126 @@
+/* ------------------------------------------- */
+/* HEADER | CATEGORIES
+/* ------------------------------------------- */
+
+.cat-header {
+    // CSS Grid
+    display: grid;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgba($color-black, .40), rgba($color-black, .70)), url(../images/clean-hd-6.jpeg);
+    background-position: center;
+    background-size: cover;
+
+    &__heading-1 {
+        // CSS Grid
+        grid-row: 5 / 9;
+        grid-column: 1 / -1;
+        justify-self: center;
+        align-self: center;
+
+        font-weight: 600;
+        font-size: 5rem;
+        letter-spacing: 1rem;
+    }
+
+    &__heading-2 {
+        // CSS Grid
+        grid-row: 6 / 9;
+        grid-column: 1 / -1;
+        justify-self: center;
+        align-self: center;
+
+        color: $color-white;
+        font-weight: 300;
+        font-size: 2rem;
+        letter-spacing: .2rem;
+    }
+
+    &__button {
+        // CSS Grid
+        grid-row: 7 / 9;
+        grid-column: 1 / -1;
+        justify-self: center;
+        align-self: center;
+        font-size: 1.5rem;
+        letter-spacing: .2rem;
+        text-transform: uppercase;
+        z-index: 1;
+    }
+}
+
+/* ------------------------------------------- */
+/* CATEGORIES SECTION | CATEGORIES
+/* ------------------------------------------- */
+
+.cat-container-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-gap: 1rem;
+    margin: .2rem;
+}
+
+.category-row {
+    display: grid;
+    grid-row-gap: 2rem;
+    grid-column-gap: 1rem;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    letter-spacing: .4rem;
+    margin: 3.5rem;
+    padding: 10rem;
+    width: 85%;
+    color: $color-white;
+    box-shadow: 1rem 1rem 3rem rgba($color-black, .50);
+    transition: all .2s;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &--1 {
+        background-image: linear-gradient(rgba($color-black, .30), rgba($color-black, .70)), url(../images/cat-1.jpeg);
+        @include bkPosition;
+    }
+    &--2 {
+        background-image: linear-gradient(rgba($color-black, .30), rgba($color-black, .70)), url(../images/cat-2.jpg);
+        @include bkPosition;
+    }
+    &--3 {
+        background-image: linear-gradient(rgba($color-black, .30), rgba($color-black, .70)), url(../images/cat-3.jpeg);
+        @include bkPosition;
+    }
+    &--4 {
+        background-image: linear-gradient(rgba($color-black, .30), rgba($color-black, .70)), url(../images/cat-4.jpeg);
+        @include bkPosition;
+    }
+    &--5 {
+        background-image: linear-gradient(rgba($color-black, .30), rgba($color-black, .70)), url(../images/cat-5.jpeg);
+        @include bkPosition;
+    }
+    &--6 {
+        background-image: linear-gradient(rgba($color-black, .30), rgba($color-black, .70)), url(../images/cat-6.jpeg);
+        @include bkPosition;
+    }
+    &--7 {
+        background-image: linear-gradient(rgba($color-black, .30), rgba($color-black, .70)), url(../images/cat-7.jpg);
+        @include bkPosition;
+    }
+    &--8 {
+        background-image: linear-gradient(rgba($color-black, .30), rgba($color-black, .70)), url(../images/cat-8.jpeg);
+        @include bkPosition;
+    }
+    &--9 {
+        background-image: linear-gradient(rgba($color-black, .30), rgba($color-black, .70)), url(../images/cat-9.jpeg);
+        @include bkPosition;
+    }
+    &--10 {
+        background-image: linear-gradient(rgba($color-black, .30), rgba($color-black, .70)), url(../images/cat-10.jpeg);
+        @include bkPosition;
+    }
+}
