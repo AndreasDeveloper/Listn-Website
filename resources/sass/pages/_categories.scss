@@ -9,11 +9,11 @@
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 
     height: 100vh;
-    width: 100%;
+    max-width: 100%;
     background-image: linear-gradient(to bottom, rgba($color-black, .40), rgba($color-black, .70)), url(../images/clean-hd-6.jpeg);
-    background-position: center;
-    background-size: cover;
+    @include bkPosition;
 
+    // Generic header (used in multiple pages on LISTN)
     @include genericHeader;
 }
 
@@ -25,7 +25,12 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     grid-gap: 1rem;
-    margin: .2rem;
+    margin: 5rem;
+
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-vsmall-3) {
+        margin: 0;
+    }
 }
 
 .category-row {
@@ -42,7 +47,6 @@
     color: $color-white;
     box-shadow: 1rem 1rem 3rem rgba($color-black, .50);
     transition: all .2s;
-    cursor: pointer;
 
     &:hover {
         transform: scale(1.05);
@@ -87,5 +91,9 @@
     &--10 {
         background-image: linear-gradient(rgba($color-black, .30), rgba($color-black, .70)), url(../images/cat-10.jpeg);
         @include bkPosition;
+    }
+
+    &__heading {
+        cursor: pointer;
     }
 }

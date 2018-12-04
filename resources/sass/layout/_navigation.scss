@@ -140,6 +140,11 @@
         }
     }
 
+    &__link {
+        text-decoration: none;
+        color: inherit;
+    }
+
     &__close {
         position: absolute;
         top: 85%;

@@ -344,6 +344,17 @@
         font-weight: 600;
         font-size: 5rem;
         letter-spacing: 1rem;
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-small-md) {
+            font-size: 3rem;
+        }
+        @media only screen and (max-width: $bp-vsmall-2) {
+            font-size: 2rem;
+        }
+        @media only screen and (max-width: $bp-vsmall-5) {
+            font-size: 1rem;
+        }
     }
 
     &__heading-2 {
@@ -387,12 +398,15 @@ $bp-largest-3: 70.625em;   // 1130px
 $bp-largest-4: 68.75em;    // 1100px
 $bp-large: 62.5em;   // 1000px
 $bp-medium: 50em;    // 800px
+$bp-small-md: 43.75em; // 700px
 $bp-small: 37.5em;   // 600px
 $bp-vsmall: 33.25em;  // 532px
 $bp-vsmall-1: 31.25em; // 500px
 $bp-vsmall-1b: 28.125em; // 450px
 $bp-vsmall-2: 25em;   // 400px
 $bp-vsmall-3: 23.75em; // 375px
+$bp-vsmall-4: 20.9375em; // 335px
+$bp-vsmall-5: 18.75em;  // 300px
 
 /* ------------------------------------------- */
 /* MEDIA QUERY MANAGER
