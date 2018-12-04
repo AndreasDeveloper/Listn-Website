@@ -43,93 +43,6 @@
         }
 }
 
-/* ------------------------------------------- */
-/* MEDIA QUERIES | SHORTCUT VERSION
-/* ------------------------------------------- */
-
-$bp-huge: 120em;       // 1920px
-$bp-desktop: 86.875em; // 1390px
-$bp-desktop-2: 81.25em; // 1300px
-$bp-largest: 75em;   // 1200px
-$bp-largest-2: 71.5625em;  // 1145px
-$bp-largest-3: 70.625em;   // 1130px
-$bp-largest-4: 68.75em;    // 1100px
-$bp-large: 62.5em;   // 1000px
-$bp-medium: 50em;    // 800px
-$bp-small: 37.5em;   // 600px
-$bp-vsmall: 33.25em;  // 532px
-$bp-vsmall-1: 31.25em; // 500px
-$bp-vsmall-1b: 28.125em; // 450px
-$bp-vsmall-2: 25em;   // 400px
-$bp-vsmall-3: 23.75em; // 375px
-
-/* ------------------------------------------- */
-/* MEDIA QUERY MANAGER
-/* ------------------------------------------- */
-
-/* // SIZES / DEVICES \\
-    0 - 600px > Phone
-    600 - 900px > Tablet Portrait
-    900 - 1200px > Tablet Landscape
-    [1200 - 18009 is where our normal style apply
-    1800px + >Big Desktop
-
-    1em = 16px - KIM
-*/
-
-/* // BREAKPOINT NAMES \\
-    $breakpoint argument choices:
-    - phone
-    - tab-port
-    - tab-land
-    - big-desktop
-*/
-
-
-@mixin respond($breakpoint) {
-
-    @if $breakpoint == iphone-p {
-        @media (max-width: 25.875em), (max-height: 46em) { @content };     // 414px = width | Iphone 6/7/8 Plus
-    }
-
-    @if $breakpoint == iphone {
-        @media (max-width: 23.435em), (max-height: 41.687em) { @content }; // 375px | Iphone 6/7/8
-    }
-
-    @if $breakpoint == phone {
-        @media (max-width: 37.5em) { @content };    // 600px
-    }
-
-    @if $breakpoint == ipad {
-        @media (max-width: 48em), (max-height: 64em) { @content }; // 768px - IPAD
-    }
-
-    @if $breakpoint == tab-port {
-        @media (max-width: 56.25em) { @content };     // 900px
-    }
-
-    @if $breakpoint == tab-land {
-        @media (max-width: 75em) { @content };    // 1200px
-    }
-
-    @if $breakpoint == lap-top-2 {
-        @media (max-width: 81.875em) { @content }; // 1300px
-    }
-
-    @if $breakpoint == lap-top {
-        @media (min-width: 82.062em) { @content }; // 1313px
-    }
-
-    @if $breakpoint == small-desktop {
-        @media (min-width: 86.875em)   { @content };   // 1390px
-    }
-
-    @if $breakpoint == big-desktop {
-        @media (min-width: 112.5em) { @content };    // 1800px + | min-width > If the size is more than 1800px, content in it will apply, if its less, content in it won't apply
-    }
-}
-
-
 /* ------------------------------------------------------------------------------------------------------------------------ */
 /* MUSIC PREVIEW PLAYER
 /* ------------------------------------------------------------------------------------------------------------------------ */
@@ -141,20 +54,17 @@ $bp-vsmall-3: 23.75em; // 375px
     // CSS Grid
     grid-row: 3 / 7;
     grid-column: 2 / 5;
-
     display: grid;
     grid-template-rows: repeat(26, 1fr);
     grid-template-columns: repeat(16, 1fr);
 
     // * --- MEDIA QUERIES --- * \\
     @media only screen and (max-width: $bp-desktop) {
-
         // CSS Grid
         grid-row: 3 / 8;
     }
     
     &__image {
-
         // CSS Grid
         grid-row: 5 / 6;
         grid-column: 1 / -1;
@@ -166,7 +76,6 @@ $bp-vsmall-3: 23.75em; // 375px
      }
 
     &__button {
-
         text-align: center;
         letter-spacing: .1rem;
 
@@ -177,7 +86,6 @@ $bp-vsmall-3: 23.75em; // 375px
     }
 
     &__el-1 {
-
         padding-left: 5.5rem;
         transition: all .2s;
 
@@ -192,7 +100,6 @@ $bp-vsmall-3: 23.75em; // 375px
 
 
     &__el-2 {
-
         padding-left: 5.5rem;
         transition: all .2s;
 
@@ -206,7 +113,6 @@ $bp-vsmall-3: 23.75em; // 375px
     }
 
     &__el-3 {
-
         padding-left: 5.5rem;
         transition: all .2s;
 
@@ -414,4 +320,156 @@ $bp-vsmall-3: 23.75em; // 375px
             letter-spacing: .1rem;
             color: $color-primary-light;
         }
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* CATEGORIES | BACKGROUND IMAGE POSITION
+/* ------------------------------------------------------------------------------------------------------------------------ */
+@mixin bkPosition {
+    background-position: center;
+    background-size: cover;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* GENERIC HEADER | For all sub-pages | Heading-1, heading-2, button
+/* ------------------------------------------------------------------------------------------------------------------------ */
+@mixin genericHeader {
+    &__heading-1 {
+        // CSS Grid
+        grid-row: 5 / 9;
+        grid-column: 1 / -1;
+        justify-self: center;
+        align-self: center;
+
+        font-weight: 600;
+        font-size: 5rem;
+        letter-spacing: 1rem;
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-small-md) {
+            font-size: 3rem;
+        }
+        @media only screen and (max-width: $bp-vsmall-2) {
+            font-size: 2rem;
+        }
+        @media only screen and (max-width: $bp-vsmall-5) {
+            font-size: 1rem;
+        }
+    }
+
+    &__heading-2 {
+        // CSS Grid
+        grid-row: 6 / 9;
+        grid-column: 1 / -1;
+        justify-self: center;
+        align-self: center;
+
+        color: $color-white;
+        font-weight: 300;
+        font-size: 2rem;
+        letter-spacing: .2rem;
+    }
+
+    &__button {
+        // CSS Grid
+        grid-row: 7 / 9;
+        grid-column: 1 / -1;
+        justify-self: center;
+        align-self: center;
+        font-size: 1.5rem;
+        letter-spacing: .2rem;
+        text-transform: uppercase;
+        z-index: 1;
+    }
+}
+
+
+
+/* ------------------------------------------- */
+/* MEDIA QUERIES | SHORTCUT VERSION
+/* ------------------------------------------- */
+
+$bp-huge: 120em;       // 1920px
+$bp-desktop: 86.875em; // 1390px
+$bp-desktop-2: 81.25em; // 1300px
+$bp-largest: 75em;   // 1200px
+$bp-largest-2: 71.5625em;  // 1145px
+$bp-largest-3: 70.625em;   // 1130px
+$bp-largest-4: 68.75em;    // 1100px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px
+$bp-small-md: 43.75em; // 700px
+$bp-small: 37.5em;   // 600px
+$bp-vsmall: 33.25em;  // 532px
+$bp-vsmall-1: 31.25em; // 500px
+$bp-vsmall-1b: 28.125em; // 450px
+$bp-vsmall-2: 25em;   // 400px
+$bp-vsmall-3: 23.75em; // 375px
+$bp-vsmall-4: 20.9375em; // 335px
+$bp-vsmall-5: 18.75em;  // 300px
+
+/* ------------------------------------------- */
+/* MEDIA QUERY MANAGER
+/* ------------------------------------------- */
+
+/* // SIZES / DEVICES \\
+    0 - 600px > Phone
+    600 - 900px > Tablet Portrait
+    900 - 1200px > Tablet Landscape
+    [1200 - 18009 is where our normal style apply
+    1800px + >Big Desktop
+
+    1em = 16px - KIM
+*/
+
+/* // BREAKPOINT NAMES \\
+    $breakpoint argument choices:
+    - phone
+    - tab-port
+    - tab-land
+    - big-desktop
+*/
+
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint == iphone-p {
+        @media (max-width: 25.875em), (max-height: 46em) { @content };     // 414px = width | Iphone 6/7/8 Plus
+    }
+
+    @if $breakpoint == iphone {
+        @media (max-width: 23.435em), (max-height: 41.687em) { @content }; // 375px | Iphone 6/7/8
+    }
+
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content };    // 600px
+    }
+
+    @if $breakpoint == ipad {
+        @media (max-width: 48em), (max-height: 64em) { @content }; // 768px - IPAD
+    }
+
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) { @content };     // 900px
+    }
+
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) { @content };    // 1200px
+    }
+
+    @if $breakpoint == lap-top-2 {
+        @media (max-width: 81.875em) { @content }; // 1300px
+    }
+
+    @if $breakpoint == lap-top {
+        @media (min-width: 82.062em) { @content }; // 1313px
+    }
+
+    @if $breakpoint == small-desktop {
+        @media (min-width: 86.875em)   { @content };   // 1390px
+    }
+
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) { @content };    // 1800px + | min-width > If the size is more than 1800px, content in it will apply, if its less, content in it won't apply
+    }
 }

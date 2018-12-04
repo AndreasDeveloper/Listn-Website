@@ -28,26 +28,31 @@
         <!-- PRELOADER SETUP | END -->
 
         <!-- NAVIGATION SETUP | START -->
-            <div id="menuIcon" class="menu-icon">
-                <div class="menu-line"></div>
+        <div id="menuIcon" class="menu-icon">
+            <div class="menu-line"></div>
+        </div>
+        <div id="mainMenu" class="main-menu">
+            <div class="main-menu__logo">
+                <!-- LOGO HERE -->
             </div>
-
-            <div id="mainMenu" class="main-menu">
-                <div class="main-menu__logo">
-                    <!-- LOGO HERE -->
-                </div>
-                <ul class="main-menu__list">
-                    <li class="main-menu__tab">Home<div class="line"></div></li>
-                    <li class="main-menu__tab">About<div class="line"></div></li>
-                    <li class="main-menu__tab">Preview<div class="line"></div></li>
-                    <li class="main-menu__tab">Categories<div class="line"></div></li>
-                    <li class="main-menu__tab">Testimonials<div class="line"></div></li>
-                    <li class="main-menu__tab">Contact<div class="line"></div></li>                    
-                </ul>
-                <div id="close" class="main-menu__close">
-                    <i class="icon ion-md-close main-menu__close-icon"></i>
-                </div>
+            <!-- SEARCH BAR SETUP STARTS -->
+            <form action="#" class="search">
+                <input type="text" class="search__input" placeholder="Search">
+                <button class="search__button"><i class="icon ion-ios-search search__icon"></i></button>
+            </form>
+            <!-- SEARCH BAR SETUP ENDS -->
+            <ul class="main-menu__list">
+                <li class="main-menu__tab"><i class="icon ion-ios-home main-menu__icon"></i><a href="index.html" class="main-menu__link">Home</a><div class="line"></div></li>
+                <li class="main-menu__tab"><i class="icon ion-ios-eye main-menu__icon"></i><a href="html/music-preview.html" class="main-menu__link">Preview</a><div class="line"></div></li>
+                <li class="main-menu__tab"><i class="icon ion-ios-musical-notes main-menu__icon"></i><a href="#" class="main-menu__link">LISTN</a><div class="line"></div></li>
+                <li class="main-menu__tab"><i class="icon ion-ios-apps main-menu__icon"></i><a href="html/categories.html" class="main-menu__link">Categories</a><div class="line"></div></li>
+                <li class="main-menu__tab"><i class="icon ion-ios-cash main-menu__icon"></i><a href="#" class="main-menu__link">Subscription</a><div class="line"></div></li>
+                <li class="main-menu__tab"><i class="icon ion-ios-chatbubbles main-menu__icon"></i><a href="#" class="main-menu__link">Contact</a><div class="line"></div></li>                    
+            </ul>
+            <div id="close" class="main-menu__close">
+                <i class="icon ion-md-close main-menu__close-icon"></i>
             </div>
+        </div>
         <!-- NAVIGATION SETUP | END -->
 
         <main>
@@ -187,7 +192,7 @@
     <footer class="footer">
         <!-- SECTION 1 -->
         <div class="footer-container-1">
-            <h3 class="heading-3 footer-container-1__section-1">Company</h3>
+            <h3 class="heading-3 footer-container-1__section-1">LISTN</h3>
             <ul class="footer-container-1__list">
                 <li class="footer-container-1__list__item">About</li>
                 <li class="footer-container-1__list__item">Why LISTN</li>
@@ -197,9 +202,9 @@
         <div class="footer-container-2">
             <h3 class="heading-3 footer-container-2__section-2">Quick Nav</h3>
             <ul class="footer-container-2__list">
-                <li class="footer-container-2__list__item">Home</li>
-                <li class="footer-container-2__list__item">Categories</li>
-                <li class="footer-container-2__list__item">Preview</li>
+                <li class="footer-container-2__list__item"><a href="index.html">Home</a></li>
+                <li class="footer-container-2__list__item"><a href="html/categories.html">Categories</a></li>
+                <li class="footer-container-2__list__item"><a href="html/music-preview.html">Preview</a></li>
                 <li class="footer-container-2__list__item">Subscription</li>
                 <li class="footer-container-2__list__item">Contact</li>
             </ul>
