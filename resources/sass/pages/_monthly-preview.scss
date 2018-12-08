@@ -9,10 +9,10 @@
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 
     height: 100vh;
-    width: 100%;
+    max-width: 100%;
     background-image: linear-gradient(to bottom, rgba($color-black, .40), rgba($color-black, .70)), url(../images/clean-hd-6.jpeg);
-    background-position: center;
-    background-size: cover;
-
+    @include bkPosition;
+    
+    // Generic header (used in multiple pages on LISTN)
     @include genericHeader;
 }

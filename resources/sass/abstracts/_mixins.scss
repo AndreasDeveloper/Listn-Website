@@ -293,16 +293,31 @@
         grid-row: 15 / 18;
         grid-column: 2 / 15;
 
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-desktop) {
+            grid-row: 15 / 19;
+        }
+
         &__heading {
             font-size: 2rem;
             color: $color-primary-light;
             padding-top: 1rem;
             padding-left: 1rem;
+            
+            // * --- MEDIA QUERIES --- * \\
+            @media only screen and (max-width: $bp-desktop) {
+                font-size: 1.6rem;
+            }
         }
 
         &__text {
             padding: 0 1rem 1rem 1rem;
             font-size: 1.4rem;
+
+            // * --- MEDIA QUERIES --- * \\
+            @media only screen and (max-width: $bp-desktop) {
+                font-size: 1.4rem;
+            }
         }
 }
 
@@ -311,6 +326,11 @@
         // CSS Grid
         grid-row: 18 / 19;
         grid-column: 2 / 6;
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-desktop) {
+            grid-row: 19 / 20;
+        }
 
         &__button-1,
         &__button-2 {
@@ -368,6 +388,11 @@
         font-weight: 300;
         font-size: 2rem;
         letter-spacing: .2rem;
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-desktop) {
+            padding-bottom: 2rem;
+        }
     }
 
     &__button {

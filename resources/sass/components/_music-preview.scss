@@ -24,7 +24,6 @@
 
 // Content Album Preview 1 | Music Preview ------------------------------------------------------
 .content-ap-1 {
-
     // CSS Grid
     grid-row: 1 / 8;
     grid-column: 1 / 12;
@@ -106,7 +105,6 @@
 
 // Content Album Preview 3 | Buy Album -----------------------------------------------------------------------------------
 .content-ap-3 {
-
     // CSS Grid
     grid-row: 1 / 8;
     grid-column: 1 / 12;
@@ -126,7 +124,6 @@
 
 // Content Album Preview 2 | Music Preview ------------------------------------------------------
 .content-ap-4 {
-
     // CSS Grid
     grid-row: 1 / -1;
     grid-column: 1 / -1;
@@ -181,7 +178,6 @@
 
 // Content Album Previw 2 | ABOUT ----------------------------------------------------------------------------------
 .content-ap-5 {
-
     // CSS Grid
     grid-row: 1 / 8;
     grid-column: 1 / 12;
@@ -198,7 +194,6 @@
 
 // Content Album Preview 3 | Buy Album -----------------------------------------------------------------------------------
 .content-ap-6 {
-
     // CSS Grid
     grid-row: 1 / 8;
     grid-column: 1 / 12;
@@ -217,7 +212,6 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .content-ap-7 {
-
     // CSS Grid
     grid-row: 1 / -1;
     grid-column: 1 / -1;
@@ -272,7 +266,6 @@
 
 // Content Album Previw 2 | ABOUT ----------------------------------------------------------------------------------
 .content-ap-8 {
-
     // CSS Grid
     grid-row: 1 / 8;
     grid-column: 1 / 12;
@@ -289,7 +282,6 @@
 
 // Content Album Preview 3 | Buy Album -----------------------------------------------------------------------------------
 .content-ap-9 {
-
     // CSS Grid
     grid-row: 1 / 8;
     grid-column: 1 / 12;
@@ -307,7 +299,6 @@
 
 // Album Preview Name
 .ap-name {
-
     max-height: 35rem;
     max-width: 100%;
 
@@ -321,7 +312,6 @@
 // Album Covers
 .album-cover {
     max-height: 20rem;
-
     // * --- MEDIA QUERIES --- * \\
     @media only screen and (max-width: $bp-large) {
         max-height: 15rem;
@@ -341,7 +331,6 @@
 
 // Spotify Link
 .special-s {
-
     //color: #1db954;
     color: $color-primary;
     text-decoration: none;
